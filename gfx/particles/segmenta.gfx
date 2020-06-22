@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxparticle = {
+		name = "fx_segmenta_particle"
+		type = "fx_segmenta_particle"
+		scale = 1.0
+	}
+}

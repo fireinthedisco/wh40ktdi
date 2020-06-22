@@ -1,0 +1,489 @@
+static_galaxy_scenario = {
+name = "W40K"
+default = yes
+priority = 0
+num_empires = { min = 0 max = 0 }
+num_empire_default = 0
+marauder_empire_default = 0
+marauder_empire_max = 0
+fallen_empire_max = 0
+advanced_empire_default = 0
+core_radius = 0
+colonizable_planet_odds = 1
+primitive_odds = 1
+crisis_strength = 1
+random_hyperlanes = no
+num_wormhole_pairs = { min = 0 max = 0 }
+num_wormhole_pairs_default = 0
+num_gateways = { min = 0 max = 0 }
+num_gateways_default = 0
+
+system = { id = "1" name = "Sol" position = { x = 215 y = -35 } }
+system = { id = "2" name = "Cthonia" position = { x = 200 y = -40 } }
+system = { id = "3" name = "Molech" position = { x = 210 y = -15 } }
+system = { id = "4" name = "Dorn" position = { x = 180 y = 10 } }
+system = { id = "5" name = "Prospero" position = { x = 105 y = -15 } }
+system = { id = "6" name = "Kato" position = { x = 140 y = 50 } }
+system = { id = "7" name = "Catachan" position = { x = 115 y = 15 } }
+system = { id = "8" name = "Xenax" position = { x = 130 y = 35 } }
+system = { id = "9" name = "Ryza" position = { x = 170 y = 25 } }
+system = { id = "10" name = "Banna" position = { x = 190 y = 40 } }
+system = { id = "11" name = "Rassios" position = { x = 190 y = 65 } }
+system = { id = "12" name = "Yarant" position = { x = 190 y = 95 } }
+system = { id = "13" name = "Voss" position = { x = 245 y = -5 } }
+system = { id = "14" name = "Harkon" position = { x = 185 y = -25 } }
+system = { id = "15" name = "Thranx" position = { x = 180 y = -50 } }
+system = { id = "16" name = "Avellorn" position = { x = 215 y = -55 } }
+system = { id = "17" name = "Sanctum" position = { x = 265 y = -25 } }
+system = { id = "18" name = "Paragon" position = { x = 240 y = 55 } }
+system = { id = "19" name = "Necromunda" position = { x = 245 y = 95 } }
+system = { id = "20" name = "Sanctus" position = { x = 230 y = 80 } }
+system = { id = "21" name = "Tahnel" position = { x = 260 y = 50 } }
+system = { id = "22" name = "Phaeton" position = { x = 265 y = 65 } }
+system = { id = "23" name = "Eyrie" position = { x = 285 y = 85 } }
+system = { id = "24" name = "Constantinium" position = { x = 350 y = 45 } }
+system = { id = "25" name = "Macharia" position = { x = 365 y = 5 } }
+system = { id = "26" name = "Gathalamor" position = { x = 275 y = 40 } }
+system = { id = "27" name = "Magnos" position = { x = 305 y = 40 } }
+system = { id = "28" name = "Methalor" position = { x = 315 y = 15 } }
+system = { id = "29" name = "Colcha" position = { x = 345 y = -20 } }
+system = { id = "30" name = "Rhanna" position = { x = 305 y = -55 } }
+system = { id = "31" name = "Hydraphur" position = { x = 355 y = -105 } }
+system = { id = "32" name = "Stygies" position = { x = 305 y = -125 } }
+system = { id = "33" name = "Ingiga" position = { x = 260 y = -100 } }
+system = { id = "34" name = "Agripinaa" position = { x = 250 y = -140 } }
+system = { id = "35" name = "Cadia" position = { x = 225 y = -155 } }
+system = { id = "36" name = "Armageddon" position = { x = 205 y = -110 } }
+system = { id = "37" name = "Magnax" position = { x = 195 y = -90 } }
+system = { id = "38" name = "Minerva" position = { x = 190 y = -115 } }
+system = { id = "39" name = "Elysia" position = { x = 175 y = -110 } }
+system = { id = "40" name = "Fenris" position = { x = 180 y = -150 } }
+system = { id = "41" name = "Paramar" position = { x = 155 y = -145 } }
+system = { id = "42" name = "Vanaheim" position = { x = 155 y = -120 } }
+system = { id = "43" name = "Voss Prime" position = { x = 170 y = -130 } }
+system = { id = "44" name = "Sangua Terra" position = { x = 195 y = -160 } }
+system = { id = "45" name = "Lorin" position = { x = 135 y = -90 } }
+system = { id = "46" name = "Nachmund" position = { x = 185 y = -180 } }
+system = { id = "47" name = "Vigilus" position = { x = 175 y = -195 } }
+system = { id = "48" name = "Belis Corona" position = { x = 155 y = -185 } }
+system = { id = "49" name = "Caliban" position = { x = 215 y = -245 } }
+system = { id = "50" name = "Bloodfall" position = { x = 210 y = 110 } }
+system = { id = "51" name = "Hermetica" position = { x = 240 y = 110 } }
+system = { id = "52" name = "Chiros" position = { x = 325 y = 110 } }
+system = { id = "53" name = "Mackan" position = { x = 295 y = -95 } }
+system = { id = "54" name = "Verghast" position = { x = 395 y = 100 } }
+system = { id = "55" name = "Tanith" position = { x = 370 y = 105 } }
+system = { id = "56" name = "Lavantia" position = { x = 290 y = 125 } }
+system = { id = "57" name = "Krieg" position = { x = 275 y = 140 } }
+system = { id = "58" name = "Khoraj" position = { x = 245 y = 135 } }
+system = { id = "59" name = "Pintax" position = { x = 220 y = 135 } }
+system = { id = "60" name = "Luther Macintyre" position = { x = 190 y = 150 } }
+system = { id = "61" name = "Posul" position = { x = 155 y = 115 } }
+system = { id = "62" name = "Valedor" position = { x = 125 y = 120 } }
+system = { id = "63" name = "Epsion Octarius" position = { x = 115 y = 95 } }
+system = { id = "64" name = "Gryphonne" position = { x = 90 y = 115 } }
+system = { id = "65" name = "Miral" position = { x = 85 y = 135 } }
+system = { id = "66" name = "Loriar" position = { x = 325 y = 175 } }
+system = { id = "67" name = "Moriorum" position = { x = 310 y = 165 } }
+system = { id = "68" name = "Temaxia" position = { x = 290 y = 190 } }
+system = { id = "69" name = "Graia" position = { x = 255 y = 160 } }
+system = { id = "70" name = "Ophelia" position = { x = 225 y = 165 } }
+system = { id = "71" name = "Thargorum" position = { x = 195 y = 190 } }
+system = { id = "72" name = "Gerat" position = { x = 175 y = 200 } }
+system = { id = "73" name = "Forgefane" position = { x = 170 y = 170 } }
+system = { id = "74" name = "Chamos" position = { x = 140 y = 170 } }
+system = { id = "75" name = "V'run" position = { x = 130 y = 190 } }
+system = { id = "76" name = "Tallarn" position = { x = 115 y = 175 } }
+system = { id = "77" name = "Carpathia" position = { x = 60 y = 160 } }
+system = { id = "78" name = "Pranagar" position = { x = 55 y = 180 } }
+system = { id = "79" name = "Colkasth" position = { x = 35 y = 170 } }
+system = { id = "80" name = "Raas Bisor" position = { x = 320 y = 205 } }
+system = { id = "81" name = "Aquilon" position = { x = 300 y = 250 } }
+system = { id = "82" name = "Barbarus" position = { x = 235 y = 205 } }
+system = { id = "83" name = "Drachu" position = { x = 205 y = 215 } }
+system = { id = "84" name = "Raikan" position = { x = 195 y = 240 } }
+system = { id = "85" name = "Kalidar" position = { x = 170 y = 215 } }
+system = { id = "86" name = "Zaebus" position = { x = 95 y = 220 } }
+system = { id = "87" name = "Danubis" position = { x = 65 y = 210 } }
+system = { id = "88" name = "Tolkhan" position = { x = 40 y = 245 } }
+system = { id = "89" name = "Esko" position = { x = -20 y = 240 } }
+system = { id = "90" name = "Solstice" position = { x = 280 y = 260 } }
+system = { id = "91" name = "Phobian" position = { x = 155 y = 270 } }
+system = { id = "92" name = "Praetoria" position = { x = 145 y = 255 } }
+system = { id = "93" name = "Bakka" position = { x = 125 y = 270 } }
+system = { id = "94" name = "Banelund" position = { x = 35 y = 275 } }
+system = { id = "95" name = "Rynnstar" position = { x = -10 y = 285 } }
+system = { id = "96" name = "Volistad" position = { x = -20 y = 265 } }
+system = { id = "97" name = "Libethra" position = { x = 250 y = 335 } }
+system = { id = "98" name = "Amarah" position = { x = 230 y = 325 } }
+system = { id = "99" name = "Kiavahr" position = { x = 160 y = 310 } }
+system = { id = "100" name = "Kastore" position = { x = 140 y = 330 } }
+system = { id = "101" name = "Jurn" position = { x = 115 y = 305 } }
+system = { id = "102" name = "Guer" position = { x = 75 y = 310 } }
+system = { id = "103" name = "Carrion Deep" position = { x = 60 y = 345 } }
+system = { id = "104" name = "Targus" position = { x = 180 y = 360 } }
+system = { id = "105" name = "Sthenelus" position = { x = 315 y = -145 } }
+system = { id = "106" name = "Chinchare" position = { x = 295 y = -140 } }
+system = { id = "107" name = "Balzac" position = { x = 280 y = -115 } }
+system = { id = "108" name = "Neutra" position = { x = 210 y = -130 } }
+system = { id = "109" name = "Hyades" position = { x = 190 y = -135 } }
+system = { id = "110" name = "Tephaine" position = { x = 320 y = -175 } }
+system = { id = "111" name = "Lathe" position = { x = 320 y = -200 } }
+system = { id = "112" name = "Zel" position = { x = 295 y = -185 } }
+system = { id = "113" name = "Hydra Cordatus" position = { x = 250 y = -155 } }
+system = { id = "114" name = "Belial" position = { x = 245 y = -190 } }
+system = { id = "115" name = "Ichoria" position = { x = 245 y = -175 } }
+system = { id = "116" name = "Xana" position = { x = 215 y = -190 } }
+system = { id = "117" name = "Drakaasi" position = { x = 210 y = -200 } }
+system = { id = "118" name = "Sicarus" position = { x = 210 y = -175 } }
+system = { id = "119" name = "Argentor" position = { x = 125 y = -185 } }
+system = { id = "120" name = "Gildar" position = { x = 110 y = -175 } }
+system = { id = "121" name = "Mahr'douk" position = { x = 90 y = -180 } }
+system = { id = "122" name = "Vernalis" position = { x = 85 y = -200 } }
+system = { id = "123" name = "Winterhome" position = { x = 75 y = -190 } }
+system = { id = "124" name = "Cyrus Vulpa" position = { x = 340 y = -205 } }
+system = { id = "125" name = "Fydae" position = { x = 305 y = -230 } }
+system = { id = "126" name = "Tygress" position = { x = 285 y = -210 } }
+system = { id = "127" name = "Scintilla" position = { x = 280 y = -230 } }
+system = { id = "128" name = "Aktosha" position = { x = 230 y = -210 } }
+system = { id = "129" name = "Eidolon" position = { x = 220 y = -225 } }
+system = { id = "130" name = "Arx" position = { x = 185 y = -215 } }
+system = { id = "131" name = "Boros" position = { x = 155 y = -215 } }
+system = { id = "132" name = "Dhobash" position = { x = 125 y = -235 } }
+system = { id = "133" name = "Prismata" position = { x = 110 y = -240 } }
+system = { id = "134" name = "Krandor" position = { x = 70 y = -245 } }
+system = { id = "135" name = "Lysades" position = { x = 50 y = -235 } }
+system = { id = "136" name = "Gethsemane" position = { x = 45 y = -250 } }
+system = { id = "137" name = "Tusk" position = { x = 360 y = -260 } }
+system = { id = "138" name = "Josia" position = { x = 295 y = -265 } }
+system = { id = "139" name = "Jaggafall" position = { x = 250 y = -250 } }
+system = { id = "140" name = "Sameter" position = { x = 200 y = -270 } }
+system = { id = "141" name = "Vostroya" position = { x = 185 y = -290 } }
+system = { id = "142" name = "Silence" position = { x = 175 y = -265 } }
+system = { id = "143" name = "Vraks" position = { x = 145 y = -275 } }
+system = { id = "144" name = "Thracian Primaris" position = { x = 140 y = -300 } }
+system = { id = "145" name = "Mordian" position = { x = 120 y = -255 } }
+system = { id = "146" name = "Purgatory" position = { x = 80 y = -280 } }
+system = { id = "147" name = "The Maw" position = { x = 65 y = -265 } }
+system = { id = "148" name = "Mezoa" position = { x = 30 y = -295 } }
+system = { id = "149" name = "Goth" position = { x = 5 y = -270 } }
+system = { id = "150" name = "Kanak" position = { x = 125 y = -325 } }
+system = { id = "151" name = "Lucius" position = { x = 65 y = -320 } }
+system = { id = "152" name = "Zambeque" position = { x = -10 y = -310 } }
+system = { id = "153" name = "The Rock" position = { x = 115 y = -120 } }
+system = { id = "154" name = "Cornucopeon" position = { x = 105 y = -110 } }
+system = { id = "155" name = "Tranquility" position = { x = 105 y = 30 } }
+system = { id = "156" name = "Iblis" position = { x = 110 y = 40 } }
+system = { id = "157" name = "Gargathea" position = { x = 115 y = 50 } }
+system = { id = "158" name = "Vyaniah" position = { x = 115 y = 65 } }
+system = { id = "159" name = "Optera" position = { x = 115 y = 75 } }
+system = { id = "160" name = "Kyro" position = { x = 100 y = 85 } }
+system = { id = "161" name = "Agrathane Excellia" position = { x = 90 y = -155 } }
+system = { id = "162" name = "Fortress" position = { x = 75 y = -140 } }
+system = { id = "163" name = "Molov" position = { x = 50 y = -110 } }
+system = { id = "164" name = "Aryand" position = { x = 75 y = -95 } }
+system = { id = "165" name = "Ogrys" position = { x = 60 y = -70 } }
+system = { id = "166" name = "Cocholus" position = { x = 75 y = -40 } }
+system = { id = "167" name = "Sarum" position = { x = 65 y = -25 } }
+system = { id = "168" name = "Golgotha" position = { x = 80 y = -10 } }
+system = { id = "169" name = "Kovalic" position = { x = 90 y = 5 } }
+system = { id = "170" name = "Hell's Teeth" position = { x = 75 y = 5 } }
+system = { id = "171" name = "Torvendis" position = { x = 75 y = 15 } }
+system = { id = "172" name = "Ghalmek" position = { x = 65 y = 20 } }
+system = { id = "173" name = "Khirab" position = { x = 95 y = 20 } }
+system = { id = "174" name = "Lamptan" position = { x = 85 y = 25 } }
+system = { id = "175" name = "Magog" position = { x = 70 y = 30 } }
+system = { id = "176" name = "Corcrya" position = { x = 50 y = 30 } }
+system = { id = "177" name = "Endymion" position = { x = 95 y = 35 } }
+system = { id = "178" name = "Rook" position = { x = 75 y = 35 } }
+system = { id = "179" name = "Galah" position = { x = 60 y = 40 } }
+system = { id = "180" name = "Decaballus" position = { x = 85 y = 40 } }
+system = { id = "181" name = "Badab" position = { x = 75 y = 50 } }
+system = { id = "182" name = "Khymara" position = { x = 95 y = 55 } }
+system = { id = "183" name = "Eshunna" position = { x = 55 y = 60 } }
+system = { id = "184" name = "Hattusa" position = { x = 70 y = 65 } }
+system = { id = "185" name = "Larsa" position = { x = 95 y = 70 } }
+system = { id = "186" name = "Archaea" position = { x = 75 y = 75 } }
+system = { id = "187" name = "Pireaus" position = { x = 55 y = 75 } }
+system = { id = "188" name = "Isin" position = { x = 65 y = 85 } }
+system = { id = "189" name = "Phargos Hex" position = { x = 85 y = 90 } }
+system = { id = "190" name = "Karthago" position = { x = 75 y = 110 } }
+system = { id = "191" name = "Balor" position = { x = 60 y = 125 } }
+system = { id = "192" name = "Valhalla" position = { x = 20 y = -200 } }
+system = { id = "193" name = "Alaric" position = { x = 40 y = -180 } }
+system = { id = "194" name = "Krastellan" position = { x = 20 y = -175 } }
+system = { id = "195" name = "Vitria" position = { x = 5 y = -155 } }
+system = { id = "196" name = "Ryban" position = { x = 20 y = -135 } }
+system = { id = "197" name = "Satys" position = { x = 5 y = -130 } }
+system = { id = "198" name = "Sciothopa" position = { x = 0 y = -120 } }
+system = { id = "199" name = "Arandra" position = { x = 30 y = -100 } }
+system = { id = "200" name = "Perdita" position = { x = 5 y = -90 } }
+system = { id = "201" name = "Lastrati" position = { x = 35 y = -55 } }
+system = { id = "202" name = "Pandorax" position = { x = 35 y = 40 } }
+system = { id = "203" name = "Angstrom" position = { x = 25 y = 55 } }
+system = { id = "204" name = "Chemos" position = { x = 5 y = 60 } }
+system = { id = "205" name = "Chogoris" position = { x = 30 y = 80 } }
+system = { id = "206" name = "Gartuli" position = { x = 10 y = 80 } }
+system = { id = "207" name = "Thaxis" position = { x = 20 y = 90 } }
+system = { id = "208" name = "Quintus" position = { x = 15 y = 120 } }
+system = { id = "209" name = "Volurilis" position = { x = 30 y = 125 } }
+system = { id = "210" name = "Nocturne" position = { x = 35 y = 140 } }
+system = { id = "211" name = "New Strife" position = { x = 25 y = 160 } }
+system = { id = "212" name = "Vejovium" position = { x = 10 y = 165 } }
+system = { id = "213" name = "Uralek" position = { x = 5 y = 180 } }
+system = { id = "214" name = "Varsavia" position = { x = -10 y = -235 } }
+system = { id = "215" name = "Garagos" position = { x = -5 y = -190 } }
+system = { id = "216" name = "Gamma" position = { x = -40 y = -180 } }
+system = { id = "217" name = "Grollah" position = { x = -10 y = -170 } }
+system = { id = "218" name = "Ashallon" position = { x = -35 y = -170 } }
+system = { id = "219" name = "Occulus" position = { x = -20 y = -160 } }
+system = { id = "220" name = "Cryptus" position = { x = -30 y = -145 } }
+system = { id = "221" name = "Archanis Sheer" position = { x = -45 y = -135 } }
+system = { id = "222" name = "Cornys" position = { x = -20 y = -125 } }
+system = { id = "223" name = "Djagos" position = { x = -15 y = -95 } }
+system = { id = "224" name = "Qyrakatosh" position = { x = -20 y = -75 } }
+system = { id = "225" name = "Hammeront" position = { x = -50 y = -80 } }
+system = { id = "226" name = "Preyspire" position = { x = -40 y = -50 } }
+system = { id = "227" name = "Van Horne" position = { x = -15 y = -35 } }
+system = { id = "228" name = "Randoryn Alpha" position = { x = -35 y = 75 } }
+system = { id = "229" name = "Manzipor" position = { x = -30 y = 90 } }
+system = { id = "230" name = "Geist" position = { x = -15 y = 110 } }
+system = { id = "231" name = "Erenon" position = { x = -35 y = 115 } }
+system = { id = "232" name = "Seidon" position = { x = -15 y = 120 } }
+system = { id = "233" name = "Oxatan" position = { x = -15 y = 150 } }
+system = { id = "234" name = "Octarius" position = { x = -40 y = 170 } }
+system = { id = "235" name = "Agrax" position = { x = -10 y = 180 } }
+system = { id = "236" name = "Jorn" position = { x = -5 y = 195 } }
+system = { id = "237" name = "Rigant" position = { x = -20 y = 215 } }
+system = { id = "238" name = "Sistec" position = { x = -95 y = -330 } }
+system = { id = "239" name = "Masuchi Parr" position = { x = -60 y = -285 } }
+system = { id = "240" name = "Icnarus" position = { x = -75 y = -265 } }
+system = { id = "241" name = "Hazhim" position = { x = -60 y = -220 } }
+system = { id = "242" name = "Inviolus" position = { x = -85 y = -215 } }
+system = { id = "243" name = "Gavendor" position = { x = -65 y = -190 } }
+system = { id = "244" name = "Baal" position = { x = -55 y = -175 } }
+system = { id = "245" name = "Rouan" position = { x = -95 y = -175 } }
+system = { id = "246" name = "Bhelik Alphus" position = { x = -55 y = -160 } }
+system = { id = "247" name = "Gracinth Pontus" position = { x = -60 y = -140 } }
+system = { id = "248" name = "Sable" position = { x = -85 y = -145 } }
+system = { id = "249" name = "Ephaeda" position = { x = -85 y = -115 } }
+system = { id = "250" name = "Jjojos" position = { x = -55 y = -115 } }
+system = { id = "251" name = "Drisinta" position = { x = -85 y = -100 } }
+system = { id = "252" name = "Boucherin" position = { x = -55 y = -95 } }
+system = { id = "253" name = "Vidar" position = { x = -95 y = -75 } }
+system = { id = "254" name = "Praesidia" position = { x = -65 y = -60 } }
+system = { id = "255" name = "Aspen" position = { x = -90 y = -35 } }
+system = { id = "256" name = "Bellicas" position = { x = -60 y = -10 } }
+system = { id = "257" name = "Veilfate" position = { x = -55 y = 5 } }
+system = { id = "258" name = "Sulis" position = { x = -75 y = 10 } }
+system = { id = "259" name = "Jhanna" position = { x = -95 y = 15 } }
+system = { id = "260" name = "Incaladion" position = { x = -80 y = 25 } }
+system = { id = "261" name = "Cirillo Prime" position = { x = -90 y = 70 } }
+system = { id = "262" name = "Icefang" position = { x = -55 y = 80 } }
+system = { id = "263" name = "Thranix" position = { x = -85 y = 80 } }
+system = { id = "264" name = "Mancora" position = { x = -75 y = 120 } }
+system = { id = "265" name = "Bleakfrost" position = { x = -60 y = 135 } }
+system = { id = "266" name = "Talon" position = { x = -95 y = 155 } }
+system = { id = "267" name = "Thantus" position = { x = -65 y = 155 } }
+system = { id = "268" name = "Tarsis Ultra" position = { x = -90 y = 175 } }
+system = { id = "269" name = "Charadon" position = { x = -80 y = 205 } }
+system = { id = "270" name = "Vorsk" position = { x = -55 y = 215 } }
+system = { id = "271" name = "Tigrus" position = { x = -75 y = 235 } }
+system = { id = "272" name = "Boros" position = { x = -90 y = 255 } }
+system = { id = "273" name = "Freya" position = { x = -70 y = 255 } }
+system = { id = "274" name = "Indiga" position = { x = -85 y = 275 } }
+system = { id = "275" name = "New Drekport" position = { x = -115 y = -340 } }
+system = { id = "276" name = "Lunaphage" position = { x = -130 y = -320 } }
+system = { id = "277" name = "Quisto'rol" position = { x = -110 y = -310 } }
+system = { id = "278" name = "Macia" position = { x = -140 y = -295 } }
+system = { id = "279" name = "Kragh" position = { x = -115 y = -265 } }
+system = { id = "280" name = "Vorinth" position = { x = -125 y = -250 } }
+system = { id = "281" name = "Draven" position = { x = -115 y = -235 } }
+system = { id = "282" name = "Gleptid Reach" position = { x = -135 y = -235 } }
+system = { id = "283" name = "Honourum" position = { x = -135 y = -215 } }
+system = { id = "284" name = "Luxor" position = { x = -145 y = -185 } }
+system = { id = "285" name = "Dunroamin" position = { x = -125 y = -165 } }
+system = { id = "286" name = "Cybele" position = { x = -125 y = -145 } }
+system = { id = "287" name = "Neo Khartoum" position = { x = -125 y = -115 } }
+system = { id = "288" name = "Gammenon" position = { x = -145 y = -80 } }
+system = { id = "289" name = "Juron" position = { x = -120 y = -75 } }
+system = { id = "290" name = "Kotrax" position = { x = -105 y = -60 } }
+system = { id = "291" name = "Vaxhallia" position = { x = -115 y = -60 } }
+system = { id = "292" name = "Eldritch" position = { x = -105 y = -40 } }
+system = { id = "293" name = "Emrah" position = { x = -130 y = -15 } }
+system = { id = "294" name = "Phaistos Osiris" position = { x = -125 y = 10 } }
+system = { id = "295" name = "Canta" position = { x = -130 y = 30 } }
+system = { id = "296" name = "Estaban" position = { x = -105 y = 40 } }
+system = { id = "297" name = "Solementum" position = { x = -110 y = 70 } }
+system = { id = "298" name = "Eydolim" position = { x = -120 y = 100 } }
+system = { id = "299" name = "Orestes" position = { x = -105 y = 130 } }
+system = { id = "300" name = "Schindlegeist" position = { x = -145 y = 130 } }
+system = { id = "301" name = "Metalica" position = { x = -135 y = 170 } }
+system = { id = "302" name = "Atari Vo" position = { x = -130 y = 185 } }
+system = { id = "303" name = "Xit" position = { x = -105 y = 195 } }
+system = { id = "304" name = "Nihilas" position = { x = -140 y = 220 } }
+system = { id = "305" name = "Accatran" position = { x = -105 y = 240 } }
+system = { id = "306" name = "Hethgar" position = { x = -145 y = 255 } }
+system = { id = "307" name = "Gehenna" position = { x = -120 y = 260 } }
+system = { id = "308" name = "Blackwater" position = { x = -115 y = 280 } }
+system = { id = "309" name = "Protos" position = { x = -145 y = 285 } }
+system = { id = "310" name = "Gheden" position = { x = -105 y = 305 } }
+system = { id = "311" name = "San Leor" position = { x = -145 y = 310 } }
+system = { id = "312" name = "Solemnace" position = { x = -115 y = 315 } }
+system = { id = "313" name = "Pykman" position = { x = -160 y = -370 } }
+system = { id = "314" name = "Orask" position = { x = -155 y = -335 } }
+system = { id = "315" name = "Nostramo" position = { x = -180 y = -310 } }
+system = { id = "316" name = "Cairn" position = { x = -195 y = -300 } }
+system = { id = "317" name = "Hale" position = { x = -165 y = -295 } }
+system = { id = "318" name = "Nethersken" position = { x = -195 y = -280 } }
+system = { id = "319" name = "Kruun" position = { x = -200 y = -265 } }
+system = { id = "320" name = "Garguur" position = { x = -165 y = -245 } }
+system = { id = "321" name = "Gulgorahd" position = { x = -190 y = -240 } }
+system = { id = "322" name = "Dhol" position = { x = -155 y = -230 } }
+system = { id = "323" name = "Memlock" position = { x = -190 y = -225 } }
+system = { id = "324" name = "Dragon's End" position = { x = -175 y = -210 } }
+system = { id = "325" name = "Devlan" position = { x = -200 y = -65 } }
+system = { id = "326" name = "Firestorm" position = { x = -180 y = 0 } }
+system = { id = "327" name = "Olympia" position = { x = -155 y = 20 } }
+system = { id = "328" name = "Vallyx" position = { x = -165 y = 50 } }
+system = { id = "329" name = "Praetonis" position = { x = -200 y = 115 } }
+system = { id = "330" name = "Dovar" position = { x = -185 y = 135 } }
+system = { id = "331" name = "Perlia" position = { x = -175 y = 145 } }
+system = { id = "332" name = "Kolossi" position = { x = -155 y = 150 } }
+system = { id = "333" name = "Trusk" position = { x = -165 y = 160 } }
+system = { id = "334" name = "Gravalax" position = { x = -190 y = 165 } }
+system = { id = "335" name = "Nuceria" position = { x = -155 y = 175 } }
+system = { id = "336" name = "Espandor" position = { x = -155 y = 210 } }
+system = { id = "337" name = "Newfound" position = { x = -175 y = 235 } }
+system = { id = "338" name = "Masali" position = { x = -195 y = 280 } }
+system = { id = "339" name = "Andermung" position = { x = -160 y = 325 } }
+system = { id = "340" name = "Kalleth" position = { x = -225 y = -270 } }
+system = { id = "341" name = "Yaelis" position = { x = -230 y = -230 } }
+system = { id = "342" name = "Coelia" position = { x = -245 y = -195 } }
+system = { id = "343" name = "Vorl Secundus" position = { x = -240 y = -175 } }
+system = { id = "344" name = "Neo Baku" position = { x = -230 y = -165 } }
+system = { id = "345" name = "Alfrost" position = { x = -250 y = -140 } }
+system = { id = "346" name = "Translock" position = { x = -210 y = -85 } }
+system = { id = "347" name = "Hexos" position = { x = -240 y = -65 } }
+system = { id = "348" name = "Dantris" position = { x = -240 y = -40 } }
+system = { id = "349" name = "Delta Tao" position = { x = -225 y = -20 } }
+system = { id = "350" name = "Yuctan" position = { x = -210 y = 15 } }
+system = { id = "351" name = "Anvillus" position = { x = -240 y = 20 } }
+system = { id = "352" name = "Follax" position = { x = -210 y = 50 } }
+system = { id = "353" name = "Corinthe" position = { x = -205 y = 75 } }
+system = { id = "354" name = "Obsidia" position = { x = -235 y = 80 } }
+system = { id = "355" name = "Voltoris" position = { x = -230 y = 115 } }
+system = { id = "356" name = "Augura" position = { x = -215 y = 120 } }
+system = { id = "357" name = "Vior'la" position = { x = -210 y = 140 } }
+system = { id = "358" name = "Dal'yth" position = { x = -245 y = 140 } }
+system = { id = "359" name = "Sa'cea" position = { x = -225 y = 145 } }
+system = { id = "360" name = "Tau'n" position = { x = -225 y = 155 } }
+system = { id = "361" name = "T'au" position = { x = -245 y = 165 } }
+system = { id = "362" name = "Bork'an" position = { x = -220 y = 185 } }
+system = { id = "363" name = "Fal'shia" position = { x = -235 y = 185 } }
+system = { id = "364" name = "Eye of Damocles" position = { x = -205 y = 205 } }
+system = { id = "365" name = "Lagan" position = { x = -245 y = 210 } }
+system = { id = "366" name = "Nimbosa" position = { x = -205 y = 225 } }
+system = { id = "367" name = "Pavonis" position = { x = -230 y = 225 } }
+system = { id = "368" name = "Tarvan" position = { x = -205 y = 260 } }
+system = { id = "369" name = "Konor" position = { x = -245 y = 260 } }
+system = { id = "370" name = "Drohl" position = { x = -230 y = 270 } }
+system = { id = "371" name = "Talassar" position = { x = -210 y = 275 } }
+system = { id = "372" name = "Macragge" position = { x = -250 y = 280 } }
+system = { id = "373" name = "Parmenio" position = { x = -235 y = 295 } }
+system = { id = "374" name = "Talasa" position = { x = -205 y = 305 } }
+system = { id = "375" name = "Salem" position = { x = -210 y = 345 } }
+system = { id = "376" name = "Gorkamorka" position = { x = -290 y = -360 } }
+system = { id = "377" name = "Solitude" position = { x = -255 y = -325 } }
+system = { id = "378" name = "Tsagualsa" position = { x = -275 y = -280 } }
+system = { id = "379" name = "Qetesh" position = { x = -275 y = -255 } }
+system = { id = "380" name = "Thramas" position = { x = -300 y = -230 } }
+system = { id = "381" name = "Sheol" position = { x = -270 y = -215 } }
+system = { id = "382" name = "Dacia" position = { x = -285 y = -195 } }
+system = { id = "383" name = "Jedathra" position = { x = -300 y = -185 } }
+system = { id = "384" name = "Evangel" position = { x = -280 y = -180 } }
+system = { id = "385" name = "Asylus" position = { x = -260 y = -170 } }
+system = { id = "386" name = "Doton" position = { x = -280 y = -165 } }
+system = { id = "387" name = "Berien" position = { x = -295 y = -150 } }
+system = { id = "388" name = "Junkatta" position = { x = -270 y = -145 } }
+system = { id = "389" name = "Corvus Majoris" position = { x = -265 y = -130 } }
+system = { id = "390" name = "Unctious" position = { x = -260 y = -120 } }
+system = { id = "391" name = "Miasma" position = { x = -295 y = -115 } }
+system = { id = "392" name = "Exotia" position = { x = -275 y = -85 } }
+system = { id = "393" name = "Formund" position = { x = -300 y = -90 } }
+system = { id = "394" name = "Prism" position = { x = -285 y = -40 } }
+system = { id = "395" name = "Kar Duniash" position = { x = -260 y = -15 } }
+system = { id = "396" name = "Konig" position = { x = -285 y = -10 } }
+system = { id = "397" name = "Archona" position = { x = -280 y = 10 } }
+system = { id = "398" name = "Sarlok" position = { x = -300 y = 15 } }
+system = { id = "399" name = "Attila" position = { x = -285 y = 40 } }
+system = { id = "400" name = "Bellus Prime" position = { x = -265 y = 45 } }
+system = { id = "401" name = "Armato" position = { x = -285 y = 55 } }
+system = { id = "402" name = "Aurous" position = { x = -260 y = 65 } }
+system = { id = "403" name = "Vengeance" position = { x = -265 y = 85 } }
+system = { id = "404" name = "Obliterax" position = { x = -300 y = 110 } }
+system = { id = "405" name = "Pech" position = { x = -270 y = 145 } }
+system = { id = "406" name = "K'ail" position = { x = -290 y = 150 } }
+system = { id = "407" name = "Triplex Phail" position = { x = -295 y = 160 } }
+system = { id = "408" name = "D'yanoi" position = { x = -265 y = 185 } }
+system = { id = "409" name = "Ichar" position = { x = -295 y = 185 } }
+system = { id = "410" name = "Vespator" position = { x = -285 y = 210 } }
+system = { id = "411" name = "Espandor" position = { x = -270 y = 250 } }
+system = { id = "412" name = "Veridia" position = { x = -265 y = 260 } }
+system = { id = "413" name = "Iax" position = { x = -275 y = 275 } }
+system = { id = "414" name = "Prandium" position = { x = -270 y = 285 } }
+system = { id = "415" name = "Circe" position = { x = -255 y = 300 } }
+system = { id = "416" name = "Jonol" position = { x = -325 y = -110 } }
+system = { id = "417" name = "Acralem" position = { x = -335 y = -85 } }
+system = { id = "418" name = "Safehold" position = { x = -340 y = -60 } }
+system = { id = "419" name = "Avarris" position = { x = -350 y = -50 } }
+system = { id = "420" name = "Antax" position = { x = -320 y = -40 } }
+system = { id = "421" name = "Hypnoth" position = { x = -345 y = -10 } }
+system = { id = "422" name = "Carnac" position = { x = -335 y = 20 } }
+system = { id = "423" name = "Gidrim" position = { x = -350 y = 70 } }
+system = { id = "424" name = "Somonor" position = { x = -325 y = 110 } }
+system = { id = "425" name = "Bekrin" position = { x = -350 y = 125 } }
+system = { id = "426" name = "Sotha" position = { x = -305 y = 140 } }
+system = { id = "427" name = "Bulwark" position = { x = -330 y = 200 } }
+system = { id = "428" name = "Samech" position = { x = -320 y = 220 } }
+system = { id = "429" name = "Shadrac" position = { x = -360 y = -165 } }
+system = { id = "430" name = "Damnos" position = { x = -380 y = -55 } }
+system = { id = "431" name = "Darkfall" position = { x = -365 y = -40 } }
+system = { id = "432" name = "Rithcarin" position = { x = -400 y = -40 } }
+system = { id = "433" name = "Praedis Zeta" position = { x = -360 y = -20 } }
+system = { id = "434" name = "Medusa" position = { x = -375 y = 5 } }
+system = { id = "435" name = "Mandragora" position = { x = -360 y = 30 } }
+system = { id = "436" name = "Cano'var" position = { x = -355 y = 50 } }
+system = { id = "437" name = "Davatas" position = { x = -365 y = 95 } }
+system = { id = "438" name = "Cardrim" position = { x = 160 y = 5 } }
+system = { id = "439" name = "Helvault" position = { x = 135 y = 5 } }
+system = { id = "440" name = "Felis" position = { x = 140 y = 20 } }
+system = { id = "441" name = "Knaus Lambda" position = { x = 145 y = 75 } }
+system = { id = "442" name = "Chrysis" position = { x = 225 y = 10 } }
+system = { id = "443" name = "New Gidlam" position = { x = 245 y = 25 } }
+system = { id = "444" name = "Vellung" position = { x = 265 y = 0 } }
+system = { id = "445" name = "Conqueror's Due" position = { x = 290 y = 0 } }
+system = { id = "446" name = "Glorifica" position = { x = 285 y = -15 } }
+system = { id = "447" name = "Avernia" position = { x = 315 y = -35 } }
+system = { id = "448" name = "Keletros" position = { x = 165 y = -45 } }
+system = { id = "449" name = "Faeburn" position = { x = 145 y = -20 } }
+system = { id = "450" name = "Vordrast" position = { x = 340 y = -60 } }
+system = { id = "451" name = "Darkhold" position = { x = 365 y = -165 } }
+system = { id = "452" name = "Banish" position = { x = 355 y = -130 } }
+system = { id = "453" name = "Majestis" position = { x = 380 y = -110 } }
+system = { id = "454" name = "Sabatine" position = { x = 410 y = -75 } }
+system = { id = "455" name = "Meghoshta" position = { x = 400 y = -20 } }
+system = { id = "456" name = "Nervkor" position = { x = 415 y = 15 } }
+system = { id = "457" name = "Upleft" position = { x = 500 y = -500 } }
+system = { id = "458" name = "Downleft" position = { x = 500 y = 500 } }
+system = { id = "459" name = "Upright" position = { x = -500 y = -500 } }
+system = { id = "460" name = "Downright" position = { x = -500 y = 500 } }
+
+
+#nebula = { name = "Hadex Anomaly" position = { x = -325 y =  210  } radius = 40 }
+#nebula = { name = "The Maelstrom" position = { x = 65 y =  10  } radius = 20 }
+#nebula = { name = "Cicatrix Maledictum" position = { x = 0 y =  0  } radius = 80 }
+#nebula = { name = "Eye of Terror" position = { x = 225 y =  -195  } radius = 50 }
+
+
+}
