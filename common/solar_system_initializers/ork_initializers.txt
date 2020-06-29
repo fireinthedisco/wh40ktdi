@@ -1,0 +1,417 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+charadon_init = {
+	name = "Charadon"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { segmentum_ultima charadon_warband charadon_system }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "Charadon"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { charadon }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+octarius_init = {
+	name = "Octarius"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { segmentum_ultima octarius_warband octarius_system }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "Octarius"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { octarius }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+gorkamorka_init = {
+	name = "Gorkamorka"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { segmentum_ultima gorkamorka_warband gorkamorka_system }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "Gorkamorka"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { gorkamorka }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+vrun_init = {
+	name = "V'run"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { segmentum_tempestus vrun_warband vrun_warband }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "V'run"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { vrun }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+golgotha_init = {
+	name = "Golgotha"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { segmentum_ultima golgotha_warband golgotha_system }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "Golgotha"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { golgotha }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+tusk_init = {
+	name = "Tusk"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { segmentum_obscurus tusk_warband tusk_system }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "Tusk"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { tusk }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+octarius_warband_init_01 = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { segmentum_ultima octarius_warband }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
+charadon_warband_init_01 = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { segmentum_ultima charadon_warband }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}

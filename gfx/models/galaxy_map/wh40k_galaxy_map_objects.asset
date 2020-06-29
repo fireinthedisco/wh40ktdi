@@ -1,5 +1,5 @@
 entity = {
-	name = "default_galaxy_center_entity"
+	name = "wh40k_galaxy_center_entity"
 
 	cull_radius = 1000
 	default_state = "idle"

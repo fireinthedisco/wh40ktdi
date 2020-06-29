@@ -1,0 +1,11 @@
+is_sea_of_chaos_special = {
+	OR = {
+		has_planet_flag = eye_of_khorne
+		has_planet_flag = black_womb
+		has_planet_flag = gardengate
+		has_planet_flag = eternity_stair
+		has_planet_flag = well_of_eternity
+		has_planet_flag = forge_of_souls
+		has_planet_flag = warp_exit
+	}
+}

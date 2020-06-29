@@ -1,0 +1,496 @@
+ultramar = {
+	name = "Ultramar"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { ultramar custom_start_screen }
+	
+	planet_name = "Macragge"
+	planet_class = "pc_continental"
+	initializer = "macragge_init"
+	system_name = "Macragge"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+blood_angels = {
+	name = "Blood Angels"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { blood_angels custom_start_screen }
+	
+	planet_name = "Baal"
+	planet_class = "pc_continental"
+	initializer = "baal_init"
+	system_name = "Baal"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+salamanders = {
+	name = "Salamanders"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { salamanders custom_start_screen }
+	
+	planet_name = "Nocturne"
+	planet_class = "pc_continental"
+	initializer = "nocturne_init"
+	system_name = "Nocturne"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+space_wolves = {
+	name = "Space Wolves"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { space_wolves custom_start_screen }
+	
+	planet_name = "Fenris"
+	planet_class = "pc_continental"
+	initializer = "fenris_init"
+	system_name = "Fenris"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+raven_guard = {
+	name = "Raven Guard"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { raven_guard custom_start_screen }
+	
+	planet_name = "Kiavahr"
+	planet_class = "pc_continental"
+	initializer = "kiavahr_init"
+	system_name = "Kiavahr"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+white_scars = {
+	name = "White Scars"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { white_scars custom_start_screen }
+	
+	planet_name = "Chogoris"
+	planet_class = "pc_continental"
+	initializer = "chogoris_init"
+	system_name = "Chogoris"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+iron_hands = {
+	name = "Iron Hands"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { iron_hands custom_start_screen }
+	
+	planet_name = "Medusa"
+	planet_class = "pc_continental"
+	initializer = "sthenelus_init"
+	system_name = "Sthenelus"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"black"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}

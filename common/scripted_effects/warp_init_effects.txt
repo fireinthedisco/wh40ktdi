@@ -1,0 +1,193 @@
+create_random_planet_location = {
+	spawn_planet = {
+		class = "rl_unhabitable_planets" #change to warp planet list
+		location = PREV
+		orbit_location = yes
+		orbit_distance_offset = $DISTANCE$
+		orbit_angle_offset = $ANGLE$
+		init_effect = {
+			set_planet_name = random
+		}
+	}
+}
+
+create_random_planet = {
+	random_list = {
+		1 = { create_random_planet_location = { DISTANCE = 20 ANGLE = 20 }}
+		1 = { create_random_planet_location = { DISTANCE = 30 ANGLE = 190 }}
+		1 = { create_random_planet_location = { DISTANCE = 40 ANGLE = 250 }}
+		1 = { create_random_planet_location = { DISTANCE = 50 ANGLE = 60 }}
+		1 = { create_random_planet_location = { DISTANCE = 60 ANGLE = 220 }}
+		1 = { create_random_planet_location = { DISTANCE = 70 ANGLE = 340 }}
+		1 = { create_random_planet_location = { DISTANCE = 80 ANGLE = 100 }}
+		1 = { create_random_planet_location = { DISTANCE = 90 ANGLE = 150 }}
+		1 = { create_random_planet_location = { DISTANCE = 100 ANGLE = 50 }}
+		1 = { create_random_planet_location = { DISTANCE = 110 ANGLE = 70 }}
+		1 = { create_random_planet_location = { DISTANCE = 120 ANGLE = 300 }}
+		1 = { create_random_planet_location = { DISTANCE = 130 ANGLE = 90 }}
+		1 = { create_random_planet_location = { DISTANCE = 140 ANGLE = 170 }}
+		1 = { create_random_planet_location = { DISTANCE = 150 ANGLE = 40 }}
+		1 = { create_random_planet_location = { DISTANCE = 160 ANGLE = 210 }}
+		1 = { create_random_planet_location = { DISTANCE = 170 ANGLE = 290 }}
+		1 = { create_random_planet_location = { DISTANCE = 180 ANGLE = 30 }}
+		1 = { create_random_planet_location = { DISTANCE = 190 ANGLE = 80 }}
+		1 = { create_random_planet_location = { DISTANCE = 200 ANGLE = 320 }}
+		1 = { create_random_planet_location = { DISTANCE = 210 ANGLE = 310 }}
+		1 = { create_random_planet_location = { DISTANCE = 220 ANGLE = 10 }}
+	}
+}
+
+add_random_hyperlane = {
+	random_system = {
+		limit = {
+			has_star_flag = sea_of_chaos
+			NOT = { is_same_value = PREV }
+			NOT = { has_hyperlane_to = PREV }
+			distance = {
+				source = PREV
+				type = euclidean
+				max_distance <= 20
+			}
+		}
+		add_hyperlane = { from = THIS to = PREV }
+	}
+}
+
+sea_of_chaos_reroll = {
+	#Name randomization
+	random_list = {
+		3 = { set_name = "Warpspace" }
+		3 = { set_name = "Primordial Reach" }
+		3 = { set_name = "Empyrean Depths" }
+		3 = { set_name = "Sea of Chaos" }
+		3 = { set_name = "Formless Wastes" }
+		3 = { set_name = "Land of Lost Souls" }
+		3 = { set_name = "Chaotic Abyss" }
+		3 = { set_name = "Swirling Shadows" }
+		3 = { set_name = "Ether" }
+		3 = { set_name = "Immaterium" }
+		1 = { set_name = "Twilit Realm" }
+		1 = { set_name = "Void" }
+		1 = { set_name = "Infernus" }
+		1 = { set_name = "Pandaemonium" }
+	}
+	
+	#Planet randomization
+	every_system_planet = {
+		limit = {
+			NOT = { is_sea_of_chaos_special = yes }
+			NOT = { is_primary_star = yes }
+		}
+		remove_planet = yes
+	}
+	random_list = {
+		1 = { set_variable = { which = planet_count value = 1 }}
+		1 = { set_variable = { which = planet_count value = 2 }}
+		1 = { set_variable = { which = planet_count value = 3 }}
+		#1 = { set_variable = { which = planet_count value = 4 }}
+		#1 = { set_variable = { which = planet_count value = 5 }}
+		#1 = { set_variable = { which = planet_count value = 6 }}
+		#1 = { set_variable = { which = planet_count value = 7 }}
+	}
+	while = {
+		count = planet_count
+		create_random_planet = yes
+	}
+	set_variable = { which = planet_count value = 0 }
+
+
+	#Hyperlane randomization
+	every_system = {
+		limit = { has_hyperlane_to = PREV }
+		remove_hyperlane = { from = THIS to = PREV }
+		set_star_flag = removed_hyperlane
+	}
+	random_list = {
+		25 = { set_variable = { which = hyperlane_count value = 1 }}
+		40 = { set_variable = { which = hyperlane_count value = 2 }}
+		20 = { set_variable = { which = hyperlane_count value = 3 }}
+		#10 = { set_variable = { which = hyperlane_count value = 4 }}
+		#5 = { set_variable = { which = hyperlane_count value = 5 }}
+	}
+	while = {
+		count = hyperlane_count
+		add_random_hyperlane = yes
+	}
+	set_variable = { which = hyperlane_count value = 0 }
+	while = {
+		limit = {
+			NOT = {
+				any_system = {
+					has_star_flag = sea_of_chaos_anchor
+					PREV = {
+						distance = {
+							source = PREV
+							max_jumps = 30
+							use_bypasses = no
+						}
+					}
+				}
+			}
+		}
+		add_random_hyperlane = yes
+	}
+	every_system = { #In case deleting all of previous system's hyperlanes disconnected anyone from the rest of the network
+		limit = {
+			has_star_flag = sea_of_chaos
+			has_star_flag = removed_hyperlane
+		}
+		while = {
+			limit = {
+				NOT = {
+					any_system = {
+						has_star_flag = sea_of_chaos_anchor
+						PREV = {
+							distance = {
+								source = PREV
+								max_jumps = 30
+								use_bypasses = no
+							}
+						}
+					}
+				}
+			}
+			add_random_hyperlane = yes
+		}
+		remove_star_flag = removed_hyperlane
+	}
+}
+
+eye_of_khorne_init = {
+	set_planet_name = "Eye of Khorne"
+	set_planet_flag = eye_of_khorne
+}
+
+black_womb_init = {
+	set_planet_name = "Black Womb"
+	set_planet_flag = black_womb
+}
+
+gardengate_init = {
+	set_planet_name = "The Gardengate"
+	set_planet_flag = gardengate
+}
+
+eternity_stair_init = {
+	set_planet_name = "The Eternity Stair"
+	set_planet_flag = eternity_stair
+}
+
+well_of_eternity_init = {
+	set_planet_name = "The Well of Eternity"
+	set_planet_flag = well_of_eternity
+}
+
+forge_of_souls_init = {
+	set_planet_name = "The Forge of Souls"
+	set_planet_flag = forge_of_souls
+}
+
+warp_exit_init = {
+	set_planet_name = "Warpgate"
+	set_planet_flag = warp_exit
+}

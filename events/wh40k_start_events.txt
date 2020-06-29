@@ -1,0 +1,290 @@
+namespace = wh40k_start
+
+event = {
+	id = wh40k_start.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_country = {
+			limit = { has_country_flag = imperium_sanctus }
+			set_name = "Imperium Sanctus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = imperium_sanctus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = imperium_nihilus }
+			set_name = "Imperium Nihilus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = imperium_nihilus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = tempestus }
+			set_name = "Tempestus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = tempestus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = pacificus }
+			set_name = "Pacificus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = pacificus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = pacificus_nihilus }
+			set_name = "Pacificus Nihilus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = pacificus_nihilus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = obscurus }
+			set_name = "Obscurus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = obscurus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = obscurus_sanctus }
+			set_name = "Obscurus Sanctus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = obscurus_sanctus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = ultima_sanctus }
+			set_name = "Ultima Sanctus"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = ultima_sanctus
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+
+		random_country = {
+			limit = { has_country_flag = ultramar }
+			set_name = "Ultramar"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = ultramar
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = blood_angels }
+			set_name = "Blood Angels"
+		}
+		random_country = {
+			limit = { has_country_flag = salamanders }
+			set_name = "Salamanders"
+		}
+		random_country = {
+			limit = { has_country_flag = space_wolves }
+			set_name = "Space Wolves"
+		}
+		random_country = {
+			limit = { has_country_flag = raven_guard }
+			set_name = "Raven Guard"
+		}
+		random_country = {
+			limit = { has_country_flag = white_scars }
+			set_name = "White Scars"
+		}
+		random_country = {
+			limit = { has_country_flag = iron_hands }
+			set_name = "Iron Hands"
+		}
+		
+		random_country = {
+			limit = { has_country_flag = sautekh_dynasty }
+			set_name = "Sautekh"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = sautekh_dynasty
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = sekemtar_dynasty }
+			set_name = "Sekemtar"
+		}
+		random_country = {
+			limit = { has_country_flag = arrynmarok_dynasty }
+			set_name = "Arrynmarok"
+		}
+		random_country = {
+			limit = { has_country_flag = mephrit_dynasty }
+			set_name = "Mephrit"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = mephrit_dynasty
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = nihilakh_dynasty }
+			set_name = "Nihilakh"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = nihilakh_dynasty
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = nephrekh_dynasty }
+			set_name = "Nephrekh"
+		}
+		random_country = {
+			limit = { has_country_flag = thokht_dynasty }
+			set_name = "Thokht"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = thokht_dynasty
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		
+		random_country = {
+			limit = { has_country_flag = charadon_warband }
+			set_name = "Snagrodz Whakka Boiz"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = charadon_warband
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = octarius_warband }
+			set_name = "Zog Steeltoof Chompazz"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = octarius_warband
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = gorkamorka_warband }
+			set_name = "Gorkamorka"
+		}
+		random_country = {
+			limit = { has_country_flag = vrun_warband }
+			set_name = "V'run"
+		}
+		random_country = {
+			limit = { has_country_flag = golgotha_warband }
+			set_name = "Golgotha"
+		}
+		random_country = {
+			limit = { has_country_flag = tusk_warband }
+			set_name = "Tusk"
+		}
+		
+		random_country = {
+			limit = { has_country_flag = tau_empire }
+			set_name = "T'au Empire"
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = tau_empire
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+	}
+}

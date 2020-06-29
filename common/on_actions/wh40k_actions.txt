@@ -1,0 +1,7 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		warp.1
+		wh40k_start.1
+	}
+}

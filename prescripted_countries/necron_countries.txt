@@ -1,0 +1,567 @@
+sautekh_dynasty = {
+	name = "Sautekh"
+	adjective = "Sautekh"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { sautekh_dynasty custom_start_screen }
+	
+	planet_name = "Mandragora"
+	planet_class = "pc_continental"
+	initializer = "mandragora_init"
+	system_name = "Mandragora"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+sekemtar_dynasty = {
+	name = "Sekemtar"
+	adjective = "Sekemtar"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { sekemtar_dynasty custom_start_screen }
+	
+	planet_name = "Sarlok"
+	planet_class = "pc_continental"
+	initializer = "sarlok_init"
+	system_name = "Sarlok"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+arrynmarok_dynasty = {
+	name = "Arrynmarok"
+	adjective = "Arrynmarok"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { arrynmarok_dynasty custom_start_screen }
+	
+	planet_name = "Somonor"
+	planet_class = "pc_continental"
+	initializer = "somonor_init"
+	system_name = "Somonor"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+mephrit_dynasty = {
+	name = "Mephrit"
+	adjective = "Mephrit"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { mephrit_dynasty custom_start_screen }
+	
+	planet_name = "Djagos"
+	planet_class = "pc_continental"
+	initializer = "djagos_init"
+	system_name = "Djagos"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+arrynmarok_dynasty = {
+	name = "Arrynmarok"
+	adjective = "Arrynmarok"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { arrynmarok_dynasty custom_start_screen }
+	
+	planet_name = "Somonor"
+	planet_class = "pc_continental"
+	initializer = "somonor_init"
+	system_name = "Somonor"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+nihilakh_dynasty = {
+	name = "Nihilakh"
+	adjective = "Nihilakh"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { nihilakh_dynasty custom_start_screen }
+	
+	planet_name = "Gheden"
+	planet_class = "pc_continental"
+	initializer = "gheden_init"
+	system_name = "Gheden"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+nephrekh_dynasty = {
+	name = "Nephrekh"
+	adjective = "Nephrekh"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { nephrekh_dynasty custom_start_screen }
+	
+	planet_name = "Aryand"
+	planet_class = "pc_continental"
+	initializer = "aryand_init"
+	system_name = "Aryand"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+thokht_dynasty = {
+	name = "Thokht"
+	adjective = "Thokht"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { thokht_dynasty custom_start_screen }
+	
+	planet_name = "Meghoshta"
+	planet_class = "pc_continental"
+	initializer = "meghoshta_init"
+	system_name = "Meghoshta"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
