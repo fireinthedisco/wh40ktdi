@@ -5,3 +5,9 @@ on_game_start = {
 		wh40k_start.1
 	}
 }
+
+on_monthly_pulse = {
+	events = {
+		wh40k.100
+	}
+}

@@ -1,0 +1,342 @@
+@pop_growth_period = 1 #years
+@r_max = 0.05
+
+#hive worlds 100G-2T, most ~750G, Terra 1P, magnitude 9, terra magnitude 12
+#forge worlds 5G-50G, magnitude 9
+#agri worlds 500M-5G, magnitude 6
+#industrial worlds 1G-15G, magnitude 9
+#mining worlds 200K-50M, magnitude 3
+#civilized worlds 500M-10G, magnitude 6
+#fortress worlds 100M-2G, magnitude 6
+#paradise worlds 500K-5M, magnitude 3
+#research worlds 10M-200M, magnitude 6
+#penal worlds ?, magnitude 6
+
+reconcile_magnitude = {
+	if = {
+		limit = { NOT = { check_variable = { which = magnitude value = $COMPARE_MAGNITUDE$ }}}
+		if = {
+			limit = { check_variable = { which = magnitude value > $COMPARE_MAGNITUDE$ }}
+			set_variable = { which = magnitude_diff value = magnitude }
+			subtract_variable = { which = magnitude_diff value = $COMPARE_MAGNITUDE$ }
+			set_variable = { which = magnitude_diff_absolute value = 1 }
+			while = {
+				count = magnitude_diff
+				multiply_variable = { which = magnitude_diff_absolute value = 10 }
+			}
+			divide_variable = { which = $TARGET_VAR$ value = magnitude_diff_absolute }
+		}
+		else_if = {
+			limit = { check_variable = { which = magnitude value < $COMPARE_MAGNITUDE$ }}
+			set_variable = { which = magnitude_diff value = $COMPARE_MAGNITUDE$ }
+			subtract_variable = { which = magnitude_diff value = $COMPARE_MAGNITUDE$ }
+			set_variable = { which = magnitude_diff_absolute value = 1 }
+			while = {
+				count = magnitude_diff
+				multiply_variable = { which = magnitude_diff_absolute value = 10 }
+			}
+			multiply_variable = { which = $TARGET_VAR$ value = magnitude_diff_absolute }
+		}
+	}
+}
+
+count_housing_district = {
+	SLEX_get_custom_parameter_advanced = {
+		CONDITION_NAME = num_districts
+		FIRST_KW = type
+		SECOND_KW = $TYPE$
+		THIRD_KW = value
+		VARIABLE = housing_districts
+	}
+}
+
+calculate_k = {
+	switch = {
+		trigger = is_planet_class
+		pc_agri_world = {
+			count_housing_district = { TYPE = district_housing_complex }
+			set_variable = { which = var_k value = 300 } #300M per district
+			set_variable = { which = expected_magnitude value = 6 }
+		}
+		pc_research_world = {
+			count_housing_district = { TYPE = district_hab_dome }
+			set_variable = { which = var_k value = 10 } #10M per district
+			set_variable = { which = expected_magnitude value = 6 }
+		}
+		pc_paradise_world = {
+			count_housing_district = { TYPE = district_resort_housing }
+			set_variable = { which = var_k value = 300 } #300K per district
+			set_variable = { which = expected_magnitude value = 3 }
+		}
+		pc_fortress_world = {
+			count_housing_district = { TYPE = district_garrison_complex }
+			set_variable = { which = var_k value = 100 } #100M per district
+			set_variable = { which = expected_magnitude value = 6 }
+		}
+		pc_penal_world = {
+			count_housing_district = { TYPE = district_housing_block }
+			set_variable = { which = var_k value = 10 } #10M per district?
+			set_variable = { which = expected_magnitude value = 6 }
+		}
+		pc_mining_world = {
+			count_housing_district = { TYPE = district_housing_complex }
+			set_variable = { which = var_k value = 500 } #500K per district
+			set_variable = { which = expected_magnitude value = 3 }
+		}
+		pc_industrial_world = {
+			count_housing_district = { TYPE = district_general_housing }
+			set_variable = { which = var_k value = 1 } #1G per district
+			set_variable = { which = expected_magnitude value = 9 }
+		}
+		pc_civilized_world = {
+			count_housing_district = { TYPE = district_imperial_city }
+			set_variable = { which = var_k value = 500 } #500M per district
+			set_variable = { which = expected_magnitude value = 6 }
+		}
+		pc_forge_world = {
+			count_housing_district = { TYPE = district_hive_city }
+			set_variable = { which = var_k value = 3 } #3G per district
+			set_variable = { which = expected_magnitude value = 9 }
+		}
+		pc_hive_world = {
+			count_housing_district = { TYPE = district_hive_cluster }
+			set_variable = { which = var_k value = 100 } #100G per district
+			set_variable = { which = expected_magnitude value = 9 }
+		}
+		pc_terra = {
+			count_housing_district = { TYPE = district_hive_cluster }
+			set_variable = { which = var_k value = 100 } #100G per district
+			set_variable = { which = expected_magnitude value = 12 }
+		}
+	}
+	reconcile_magnitude = { COMPARE_MAGNITUDE = expected_magnitude TARGET_VAR = var_k }
+	multiply_variable = { which = var_k value = housing_districts }
+	multiply_variable = { which = var_k value = 1.1 } #to allow for overpopulation
+}
+
+calculate_r = {
+	set_variable = { which = var_r value = @r_max }
+	multiply_variable = { which = var_r value = @pop_growth_period }
+}
+
+calculate_e = {
+	set_variable = { which = var_e value = 0 }
+}
+
+reset_vars = {
+	set_variable = { which = var_k value = 0 }
+	set_variable = { which = var_e value = 0 }
+	set_variable = { which = var_r value = 0 }
+	set_variable = { which = var_n value = 0 }
+	set_variable = { which = housing_districts value = 0 }
+	set_variable = { which = magnitude_diff value = 0 }
+	set_variable = { which = magnitude_diff_absolute value = 0 }
+	set_variable = { which = expected_magnitude value = 0 }
+}
+
+#dN/dt = rN(1-(N/K)) + E (+I)
+# where r is the growth rate
+# N is initial population (N0)
+# K is carrying capacity
+# I is immigration (handled by other planets' emigration), E is emigration
+calculate_pop_growth = {
+	calculate_k = yes
+	calculate_r = yes
+	calculate_e = yes
+	set_variable = { which = var_n value = population }
+
+	set_variable = { which = pop_change value = var_n }
+	divide_variable = { which = pop_change value = var_k }
+	multiply_variable = { which = pop_change value = -1 }
+	change_variable = { which = pop_change value = 1 }
+	multiply_variable = { which = pop_change value = var_n }
+	multiply_variable = { which = pop_change value = var_r }
+	change_variable = { which = pop_change value = var_e }
+
+	change_variable = { which = population value = pop_change }
+
+	#reset_vars = yes
+}
+
+remove_pop_modifier = {
+	if = { limit = { has_modifier = $CLASS$_population_1 } remove_modifier = $CLASS$_population_1 }
+	else_if = { limit = { has_modifier = $CLASS$_population_2 } remove_modifier = $CLASS$_population_2 }
+	else_if = { limit = { has_modifier = $CLASS$_population_3 } remove_modifier = $CLASS$_population_3 }
+	else_if = { limit = { has_modifier = $CLASS$_population_4 } remove_modifier = $CLASS$_population_4 }
+	else_if = { limit = { has_modifier = $CLASS$_population_5 } remove_modifier = $CLASS$_population_5 }
+	else_if = { limit = { has_modifier = $CLASS$_population_6 } remove_modifier = $CLASS$_population_6 }
+	else_if = { limit = { has_modifier = $CLASS$_population_7 } remove_modifier = $CLASS$_population_7 }
+	else_if = { limit = { has_modifier = $CLASS$_population_8 } remove_modifier = $CLASS$_population_8 }
+	else_if = { limit = { has_modifier = $CLASS$_population_9 } remove_modifier = $CLASS$_population_9 }
+	else_if = { limit = { has_modifier = $CLASS$_population_10 } remove_modifier = $CLASS$_population_10 }
+	else_if = { limit = { has_modifier = $CLASS$_population_11 } remove_modifier = $CLASS$_population_11 }
+	else_if = { limit = { has_modifier = $CLASS$_population_12 } remove_modifier = $CLASS$_population_12 }
+	else_if = { limit = { has_modifier = $CLASS$_population_13 } remove_modifier = $CLASS$_population_13 }
+	else_if = { limit = { has_modifier = $CLASS$_population_14 } remove_modifier = $CLASS$_population_14 }
+	else_if = { limit = { has_modifier = $CLASS$_population_15 } remove_modifier = $CLASS$_population_15 }
+	else_if = { limit = { has_modifier = $CLASS$_population_16 } remove_modifier = $CLASS$_population_16 }
+	else_if = { limit = { has_modifier = $CLASS$_population_17 } remove_modifier = $CLASS$_population_17 }
+	else_if = { limit = { has_modifier = $CLASS$_population_18 } remove_modifier = $CLASS$_population_18 }
+	else_if = { limit = { has_modifier = $CLASS$_population_19 } remove_modifier = $CLASS$_population_19 }
+	else_if = { limit = { has_modifier = $CLASS$_population_20 } remove_modifier = $CLASS$_population_20 }
+	else_if = { limit = { has_modifier = $CLASS$_population_21 } remove_modifier = $CLASS$_population_21 }
+	else_if = { limit = { has_modifier = $CLASS$_population_22 } remove_modifier = $CLASS$_population_22 }
+	else_if = { limit = { has_modifier = $CLASS$_population_23 } remove_modifier = $CLASS$_population_23 }
+	else_if = { limit = { has_modifier = $CLASS$_population_24 } remove_modifier = $CLASS$_population_24 }
+	else_if = { limit = { has_modifier = $CLASS$_population_25 } remove_modifier = $CLASS$_population_25 }
+	else_if = { limit = { has_modifier = $CLASS$_population_26 } remove_modifier = $CLASS$_population_26 }
+	else_if = { limit = { has_modifier = $CLASS$_population_27 } remove_modifier = $CLASS$_population_27 }
+	else_if = { limit = { has_modifier = $CLASS$_population_28 } remove_modifier = $CLASS$_population_28 }
+	else_if = { limit = { has_modifier = $CLASS$_population_29 } remove_modifier = $CLASS$_population_29 }
+	else_if = { limit = { has_modifier = $CLASS$_population_30 } remove_modifier = $CLASS$_population_30 }
+	else_if = { limit = { has_modifier = $CLASS$_population_31 } remove_modifier = $CLASS$_population_31 }
+	else_if = { limit = { has_modifier = $CLASS$_population_32 } remove_modifier = $CLASS$_population_32 }
+	else_if = { limit = { has_modifier = $CLASS$_population_33 } remove_modifier = $CLASS$_population_33 }
+	else_if = { limit = { has_modifier = $CLASS$_population_34 } remove_modifier = $CLASS$_population_34 }
+	else_if = { limit = { has_modifier = $CLASS$_population_35 } remove_modifier = $CLASS$_population_35 }
+	else_if = { limit = { has_modifier = $CLASS$_population_36 } remove_modifier = $CLASS$_population_36 }
+	else_if = { limit = { has_modifier = $CLASS$_population_37 } remove_modifier = $CLASS$_population_37 }
+	else_if = { limit = { has_modifier = $CLASS$_population_38 } remove_modifier = $CLASS$_population_38 }
+	else_if = { limit = { has_modifier = $CLASS$_population_39 } remove_modifier = $CLASS$_population_39 }
+	else_if = { limit = { has_modifier = $CLASS$_population_40 } remove_modifier = $CLASS$_population_40 }
+	else_if = { limit = { has_modifier = $CLASS$_population_41 } remove_modifier = $CLASS$_population_41 }
+	else_if = { limit = { has_modifier = $CLASS$_population_42 } remove_modifier = $CLASS$_population_42 }
+	else_if = { limit = { has_modifier = $CLASS$_population_43 } remove_modifier = $CLASS$_population_43 }
+	else_if = { limit = { has_modifier = $CLASS$_population_44 } remove_modifier = $CLASS$_population_44 }
+	else_if = { limit = { has_modifier = $CLASS$_population_45 } remove_modifier = $CLASS$_population_45 }
+	else_if = { limit = { has_modifier = $CLASS$_population_46 } remove_modifier = $CLASS$_population_46 }
+	else_if = { limit = { has_modifier = $CLASS$_population_47 } remove_modifier = $CLASS$_population_47 }
+	else_if = { limit = { has_modifier = $CLASS$_population_48 } remove_modifier = $CLASS$_population_48 }
+	else_if = { limit = { has_modifier = $CLASS$_population_49 } remove_modifier = $CLASS$_population_49 }
+	else_if = { limit = { has_modifier = $CLASS$_population_50 } remove_modifier = $CLASS$_population_50 }
+}
+
+assign_pop_modifier_pc = {
+	set_variable = { which = pop_steps value = population }
+	reconcile_magnitude = { COMPARE_MAGNITUDE = pop_step_magnitude TARGET_VAR = pop_step_threshold }
+	divide_variable = { which = pop_steps value = pop_step_threshold }
+
+	set_variable = { which = pop_steps_temp value = pop_steps }
+	while = {
+		limit = { check_variable = { which = pop_steps_temp value >= 1 }}
+		subtract_variable = { which = pop_steps_temp value = 1 }
+	}
+	subtract_variable = { which = pop_steps value = pop_steps_temp }
+	set_variable = { which = pop_steps_temp value = 0 }
+
+	if = {
+		limit = { NOT = { same_pop_modifier = { CLASS = $CLASS$ }}}
+		remove_pop_modifier = { CLASS = $CLASS$ }
+		if = { limit = { check_variable = { which = pop_steps value = 1 }} add_modifier = { modifier = $CLASS$_population_1 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 2 }} add_modifier = { modifier = $CLASS$_population_2 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 3 }} add_modifier = { modifier = $CLASS$_population_3 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 4 }} add_modifier = { modifier = $CLASS$_population_4 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 5 }} add_modifier = { modifier = $CLASS$_population_5 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 6 }} add_modifier = { modifier = $CLASS$_population_6 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 7 }} add_modifier = { modifier = $CLASS$_population_7 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 8 }} add_modifier = { modifier = $CLASS$_population_8 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 9 }} add_modifier = { modifier = $CLASS$_population_9 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 10 }} add_modifier = { modifier = $CLASS$_population_10 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 11 }} add_modifier = { modifier = $CLASS$_population_11 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 12 }} add_modifier = { modifier = $CLASS$_population_12 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 13 }} add_modifier = { modifier = $CLASS$_population_13 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 14 }} add_modifier = { modifier = $CLASS$_population_14 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 15 }} add_modifier = { modifier = $CLASS$_population_15 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 16 }} add_modifier = { modifier = $CLASS$_population_16 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 17 }} add_modifier = { modifier = $CLASS$_population_17 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 18 }} add_modifier = { modifier = $CLASS$_population_18 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 19 }} add_modifier = { modifier = $CLASS$_population_19 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 20 }} add_modifier = { modifier = $CLASS$_population_20 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 21 }} add_modifier = { modifier = $CLASS$_population_21 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 22 }} add_modifier = { modifier = $CLASS$_population_22 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 23 }} add_modifier = { modifier = $CLASS$_population_23 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 24 }} add_modifier = { modifier = $CLASS$_population_24 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 25 }} add_modifier = { modifier = $CLASS$_population_25 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 26 }} add_modifier = { modifier = $CLASS$_population_26 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 27 }} add_modifier = { modifier = $CLASS$_population_27 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 28 }} add_modifier = { modifier = $CLASS$_population_28 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 29 }} add_modifier = { modifier = $CLASS$_population_29 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 30 }} add_modifier = { modifier = $CLASS$_population_30 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 31 }} add_modifier = { modifier = $CLASS$_population_31 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 32 }} add_modifier = { modifier = $CLASS$_population_32 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 33 }} add_modifier = { modifier = $CLASS$_population_33 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 34 }} add_modifier = { modifier = $CLASS$_population_34 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 35 }} add_modifier = { modifier = $CLASS$_population_35 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 36 }} add_modifier = { modifier = $CLASS$_population_36 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 37 }} add_modifier = { modifier = $CLASS$_population_37 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 38 }} add_modifier = { modifier = $CLASS$_population_38 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 39 }} add_modifier = { modifier = $CLASS$_population_39 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 40 }} add_modifier = { modifier = $CLASS$_population_40 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 41 }} add_modifier = { modifier = $CLASS$_population_41 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 42 }} add_modifier = { modifier = $CLASS$_population_42 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 43 }} add_modifier = { modifier = $CLASS$_population_43 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 44 }} add_modifier = { modifier = $CLASS$_population_44 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 45 }} add_modifier = { modifier = $CLASS$_population_45 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 46 }} add_modifier = { modifier = $CLASS$_population_46 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 47 }} add_modifier = { modifier = $CLASS$_population_47 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 48 }} add_modifier = { modifier = $CLASS$_population_48 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 49 }} add_modifier = { modifier = $CLASS$_population_49 }}
+		else_if = { limit = { check_variable = { which = pop_steps value = 50 }} add_modifier = { modifier = $CLASS$_population_50 }}
+	}
+}
+
+assign_pop_modifier = {
+	switch = {
+		trigger = is_planet_class
+		pc_agri_world = {
+			set_variable = { which = pop_step_threshold value = 100 }
+			set_variable = { which = pop_step_magnitude value = 6 }
+			assign_pop_modifier_pc = { CLASS = agri_world }
+		}
+		pc_research_world = {
+			set_variable = { which = pop_step_threshold value = 5 }
+			set_variable = { which = pop_step_magnitude value = 6 }
+			assign_pop_modifier_pc = { CLASS = research_world }
+		}
+		pc_paradise_world = {
+			set_variable = { which = pop_step_threshold value = 200 }
+			set_variable = { which = pop_step_magnitude value = 3 }
+			assign_pop_modifier_pc = { CLASS = paradise_world }
+		}
+		pc_fortress_world = {
+			set_variable = { which = pop_step_threshold value = 50 }
+			set_variable = { which = pop_step_magnitude value = 6 }
+			assign_pop_modifier_pc = { CLASS = fortress_world }
+		}
+		pc_penal_world = {
+			set_variable = { which = pop_step_threshold value = 5 }
+			set_variable = { which = pop_step_magnitude value = 6 }
+			assign_pop_modifier_pc = { CLASS = penal_world }
+		}
+		pc_mining_world = {
+			set_variable = { which = pop_step_threshold value = 200 }
+			set_variable = { which = pop_step_magnitude value = 3 }
+			assign_pop_modifier_pc = { CLASS = mining_world }
+		}
+		pc_industrial_world = {
+			set_variable = { which = pop_step_threshold value = 1 }
+			set_variable = { which = pop_step_magnitude value = 9 }
+			assign_pop_modifier_pc = { CLASS = industrial_world }
+		}
+		pc_civilized_world = {
+			set_variable = { which = pop_step_threshold value = 100 }
+			set_variable = { which = pop_step_magnitude value = 6 }
+			assign_pop_modifier_pc = { CLASS = civilized_world }
+		}
+		pc_forge_world = {
+			set_variable = { which = pop_step_threshold value = 1 }
+			set_variable = { which = pop_step_magnitude value = 9 }
+			assign_pop_modifier_pc = { CLASS = forge_world }
+		}
+		pc_hive_world = {
+			set_variable = { which = pop_step_threshold value = 50 }
+			set_variable = { which = pop_step_magnitude value = 9 }
+			assign_pop_modifier_pc = { CLASS = hive_world }
+		}
+		pc_terra = {
+			set_variable = { which = pop_step_threshold value = 50 }
+			set_variable = { which = pop_step_magnitude value = 12 }
+			assign_pop_modifier_pc = { CLASS = terra }
+		}
+	}
+}

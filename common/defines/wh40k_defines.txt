@@ -1,0 +1,4 @@
+# NCamera = {
+# 	GALAXY_SPACE_SCALE_MULT 	= 5.56
+# 	ZOOM_STEPS_GALAXY 			  = { 200 350 600 900 1350 2000 4500 } 	# Galaxy zoom steps
+# }

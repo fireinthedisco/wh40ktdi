@@ -1,0 +1,52 @@
+astartes_vassal = {
+	can_expand = no
+	can_be_integrated = no
+	
+	research_agreement = yes
+	research_sharing = yes	# for tech sharing modifier
+
+	joins_overlord_wars = yes
+	calls_overlord_to_war = yes
+	can_do_diplomacy = no
+	
+	diplo_threat = 1.5
+
+	potential = {	
+		is_country_type = astartes_chapter
+		FROM = { is_country_type = imperium }
+	}
+	
+	effect = {
+		if = {
+			limit = { from = { NOT = { is_country_type = imperium }}}
+			set_subject_of = { who = none }
+		}
+	}
+}
+
+client_dynasty = {
+	can_expand = no
+	can_be_integrated = no
+	
+	research_agreement = yes
+	research_sharing = yes	# for tech sharing modifier
+
+	joins_overlord_wars = yes
+	calls_overlord_to_war = yes
+	can_do_diplomacy = no
+	
+	diplo_threat = 1.5
+
+	potential = {	
+		is_country_type = necron_dynasty
+		FROM = { is_country_type = necron_dynasty }
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { from = { NOT = { is_country_type = necron_dynasty }}}
+			set_subject_of = { who = none }
+		}
+	}
+}

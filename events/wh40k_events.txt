@@ -1,0 +1,15 @@
+namespace = wh40k
+
+event = {
+	id = wh40k.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_planet = {
+			limit = { NOT = { check_variable = { which = population value = 0 }}}
+			calculate_pop_growth = yes
+			assign_pop_modifier = yes
+		}
+	}
+}

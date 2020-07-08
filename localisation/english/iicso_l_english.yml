@@ -1,3 +1,6 @@
 ﻿l_english:
 
-FLAG_CATEGORY_imperium:0 "Imperium"
+ FLAG_CATEGORY_imperium:0 "Imperium"
+
+ planet_population:0 "Population"
+ planet_population_desc:0 "[THIS.GetName] population: [THIS.population]"

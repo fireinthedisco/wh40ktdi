@@ -9,6 +9,7 @@ event = {
 		random_country = {
 			limit = { has_country_flag = imperium_sanctus }
 			set_name = "Imperium Sanctus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -19,10 +20,12 @@ event = {
 					owner = PREV
 				}
 			}
+			save_event_target_as = imperium_sanctus
 		}
 		random_country = {
 			limit = { has_country_flag = imperium_nihilus }
 			set_name = "Imperium Nihilus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -33,10 +36,12 @@ event = {
 					owner = PREV
 				}
 			}
+			save_event_target_as = imperium_nihilus
 		}
 		random_country = {
 			limit = { has_country_flag = tempestus }
 			set_name = "Tempestus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -47,10 +52,12 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_sanctus override_requirements = yes }
 		}
 		random_country = {
 			limit = { has_country_flag = pacificus }
 			set_name = "Pacificus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -61,10 +68,12 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_sanctus override_requirements = yes }
 		}
 		random_country = {
 			limit = { has_country_flag = pacificus_nihilus }
 			set_name = "Pacificus Nihilus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -75,10 +84,12 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_nihilus override_requirements = yes }
 		}
 		random_country = {
 			limit = { has_country_flag = obscurus }
 			set_name = "Obscurus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -89,10 +100,12 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_nihilus override_requirements = yes }
 		}
 		random_country = {
 			limit = { has_country_flag = obscurus_sanctus }
 			set_name = "Obscurus Sanctus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -103,10 +116,12 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_sanctus override_requirements = yes }
 		}
 		random_country = {
 			limit = { has_country_flag = ultima_sanctus }
 			set_name = "Ultima Sanctus"
+			set_country_type = imperium
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -117,11 +132,15 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_sanctus override_requirements = yes }
 		}
 
+
+		#astartes
 		random_country = {
 			limit = { has_country_flag = ultramar }
 			set_name = "Ultramar"
+			set_country_type = astartes_chapter
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -132,35 +151,63 @@ event = {
 					owner = PREV
 				}
 			}
+			join_alliance = { who = event_target:imperium_sanctus override_requirements = yes }
 		}
 		random_country = {
 			limit = { has_country_flag = blood_angels }
 			set_name = "Blood Angels"
+			set_country_type = astartes_chapter
+			set_subject_of = { who = event_target:imperium_nihilus subject_type = astartes_vassal }
 		}
 		random_country = {
 			limit = { has_country_flag = salamanders }
 			set_name = "Salamanders"
+			set_country_type = astartes_chapter
+			set_subject_of = { who = event_target:imperium_sanctus subject_type = astartes_vassal }
 		}
 		random_country = {
 			limit = { has_country_flag = space_wolves }
 			set_name = "Space Wolves"
+			set_country_type = astartes_chapter
+			set_subject_of = { who = event_target:imperium_sanctus subject_type = astartes_vassal }
 		}
 		random_country = {
 			limit = { has_country_flag = raven_guard }
 			set_name = "Raven Guard"
+			set_country_type = astartes_chapter
+			set_subject_of = { who = event_target:imperium_sanctus subject_type = astartes_vassal }
 		}
 		random_country = {
 			limit = { has_country_flag = white_scars }
 			set_name = "White Scars"
+			set_country_type = astartes_chapter
+			set_subject_of = { who = event_target:imperium_sanctus subject_type = astartes_vassal }
 		}
 		random_country = {
 			limit = { has_country_flag = iron_hands }
 			set_name = "Iron Hands"
+			set_country_type = astartes_chapter
+			set_subject_of = { who = event_target:imperium_sanctus subject_type = astartes_vassal }
+		}
+		event_target:imperium_sanctus = {
+			federation = {
+				set_federation_type = imperium_federation
+				set_name = "Imperium Sanctus"
+			}
+		}
+		event_target:imperium_nihilus = {
+			federation = {
+				set_federation_type = imperium_federation
+				set_name = "Imperium Nihilus"
+			}
 		}
 		
+
+		#necrons
 		random_country = {
 			limit = { has_country_flag = sautekh_dynasty }
 			set_name = "Sautekh"
+			set_country_type = necron_dynasty
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -171,18 +218,24 @@ event = {
 					owner = PREV
 				}
 			}
+			save_event_target_as = sautekh_dynasty
 		}
 		random_country = {
 			limit = { has_country_flag = sekemtar_dynasty }
 			set_name = "Sekemtar"
+			set_country_type = necron_dynasty
+			set_subject_of = { who = event_target:sautekh_dynasty subject_type = client_dynasty }
 		}
 		random_country = {
 			limit = { has_country_flag = arrynmarok_dynasty }
 			set_name = "Arrynmarok"
+			set_country_type = necron_dynasty
+			set_subject_of = { who = event_target:sautekh_dynasty subject_type = client_dynasty }
 		}
 		random_country = {
 			limit = { has_country_flag = mephrit_dynasty }
 			set_name = "Mephrit"
+			set_country_type = necron_dynasty
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -197,6 +250,7 @@ event = {
 		random_country = {
 			limit = { has_country_flag = nihilakh_dynasty }
 			set_name = "Nihilakh"
+			set_country_type = necron_dynasty
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -211,10 +265,12 @@ event = {
 		random_country = {
 			limit = { has_country_flag = nephrekh_dynasty }
 			set_name = "Nephrekh"
+			set_country_type = necron_dynasty
 		}
 		random_country = {
 			limit = { has_country_flag = thokht_dynasty }
 			set_name = "Thokht"
+			set_country_type = necron_dynasty
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -227,9 +283,12 @@ event = {
 			}
 		}
 		
+
+		#orkz
 		random_country = {
 			limit = { has_country_flag = charadon_warband }
 			set_name = "Snagrodz Whakka Boiz"
+			set_country_type = ork_warband
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -244,6 +303,7 @@ event = {
 		random_country = {
 			limit = { has_country_flag = octarius_warband }
 			set_name = "Zog Steeltoof Chompazz"
+			set_country_type = ork_warband
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
@@ -258,27 +318,183 @@ event = {
 		random_country = {
 			limit = { has_country_flag = gorkamorka_warband }
 			set_name = "Gorkamorka"
+			set_country_type = ork_warband
 		}
 		random_country = {
 			limit = { has_country_flag = vrun_warband }
 			set_name = "V'run"
+			set_country_type = ork_warband
 		}
 		random_country = {
 			limit = { has_country_flag = golgotha_warband }
 			set_name = "Golgotha"
+			set_country_type = ork_warband
 		}
 		random_country = {
 			limit = { has_country_flag = tusk_warband }
 			set_name = "Tusk"
+			set_country_type = ork_warband
 		}
 		
+
+		#tau
 		random_country = {
 			limit = { has_country_flag = tau_empire }
 			set_name = "T'au Empire"
+			set_country_type = tau
 			every_system = {
 				limit = {
 					NOT = { exists = starbase }
 					has_star_flag = tau_empire
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+
+
+		#eldar
+		random_country = {
+			limit = { has_country_flag = craftworld_alaitoc }
+			set_name = "Alaitoc"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_bieltan }
+			set_name = "Biel-tan"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_iyanden }
+			set_name = "Iyanden"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_ulthwe }
+			set_name = "Ulthwé"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_altansar }
+			set_name = "Altansar"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_dorhai }
+			set_name = "Dorhai"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_kaelor }
+			set_name = "Kaelor"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_zaisuthra }
+			set_name = "Zaisuthra"
+			set_country_type = craftworld_eldar
+		}
+		random_country = {
+			limit = { has_country_flag = craftworld_ulthwenadaan }
+			set_name = "Ulthwé-Na-Daan"
+			set_country_type = craftworld_eldar
+		}
+
+
+		#tyranids
+		random_country = {
+			limit = { has_country_flag = hivefleet_leviathan }
+			set_name = "Hive Fleet Leviathan"
+			set_country_type = hivefleet
+		}
+		random_country = {
+			limit = { has_country_flag = hivefleet_arachnae }
+			set_name = "Hive Fleet Arachnae"
+			set_country_type = hivefleet
+		}
+		random_country = {
+			limit = { has_country_flag = hivefleet_garmr }
+			set_name = "Hive Fleet Garmr"
+			set_country_type = hivefleet
+		}
+		random_country = {
+			limit = { has_country_flag = hivefleet_hydra }
+			set_name = "Hive Fleet Hydra"
+			set_country_type = hivefleet
+		}
+		random_country = {
+			limit = { has_country_flag = hivefleet_kronos }
+			set_name = "Hive Fleet Kronos"
+			set_country_type = hivefleet
+		}
+		random_country = {
+			limit = { has_country_flag = hivefleet_medusa }
+			set_name = "Hive Fleet Medusa"
+			set_country_type = hivefleet
+		}
+		random_country = {
+			limit = { has_country_flag = hivefleet_naga }
+			set_name = "Hive Fleet Naga"
+			set_country_type = hivefleet
+		}
+
+
+		#chaos realms
+		random_country = {
+			limit = { has_country_flag = khorne }
+			set_name = "Khorne"
+			set_country_type = chaos_realm
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = khorne
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = slaanesh }
+			set_name = "Slaanesh"
+			set_country_type = chaos_realm
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = slaanesh
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = tzeentch }
+			set_name = "Tzeentch"
+			set_country_type = chaos_realm
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = tzeentch
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = PREV
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = nurgle }
+			set_name = "Nurgle"
+			set_country_type = chaos_realm
+			every_system = {
+				limit = {
+					NOT = { exists = starbase }
+					has_star_flag = nurgle
 				}
 				create_starbase = {
 					size = starbase_outpost

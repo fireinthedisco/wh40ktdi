@@ -1,0 +1,496 @@
+hivefleet_leviathan = {
+	name = "Hive Fleet Leviathan"
+	adjective = "Hive Fleet Leviathan"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_leviathan custom_start_screen }
+	
+	planet_name = "Queen Leviathan Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "leviathan_queen_init"
+	system_name = "Leviathan"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+hivefleet_arachnae = {
+	name = "Hive Fleet Arachnae"
+	adjective = "Hive Fleet Arachnae"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_arachnae custom_start_screen }
+	
+	planet_name = "Queen Arachnae Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "arachnae_queen_init"
+	system_name = "Arachnae"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+hivefleet_garmr = {
+	name = "Hive Fleet Garmr"
+	adjective = "Hive Fleet Garmr"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_garmr custom_start_screen }
+	
+	planet_name = "Queen Garmr Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "garmr_queen_init"
+	system_name = "Garmr"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+hivefleet_hydra = {
+	name = "Hive Fleet Hydra"
+	adjective = "Hive Fleet Hydra"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_hydra custom_start_screen }
+	
+	planet_name = "Queen Hydra Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "hydra_queen_init"
+	system_name = "Hydra"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+hivefleet_kronos = {
+	name = "Hive Fleet Kronos"
+	adjective = "Hive Fleet Kronos"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_kronos custom_start_screen }
+	
+	planet_name = "Queen Kronos Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "kronos_queen_init"
+	system_name = "Kronos"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+hivefleet_medusa = {
+	name = "Hive Fleet Medusa"
+	adjective = "Hive Fleet Medusa"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_medusa custom_start_screen }
+	
+	planet_name = "Queen Medusa Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "medusa_queen_init"
+	system_name = "Medusa"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+hivefleet_naga = {
+	name = "Hive Fleet Naga"
+	adjective = "Hive Fleet Naga"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "ART"
+		portrait = "art19"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { hivefleet_naga custom_start_screen }
+	
+	planet_name = "Queen Naga Thorax"
+	planet_class = "pc_hivequeen_thorax"
+	initializer = "naga_queen_init"
+	system_name = "Naga"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"yellow"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "art19"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}

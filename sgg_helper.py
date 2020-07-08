@@ -15,14 +15,19 @@ print("Reading from "+input_path+"...")
 lines = f.readlines()
 f.close()
 
-mode = input("Enter mode: 1. Reorder system ids; 2. Adjust system coords from 3x to 5x\n")
-while mode is not "1" and mode is not "2":
-    mode = input("Invalid input, enter 1 or 2\n")
+mode = input("Enter mode: 1. Reorder system ids; 2. Adjust system coords from 3x to 5x;\n3. Adjust system coords from 5x to 3x\n")
+while mode is not "1" and mode is not "2" and mode is not "3":
+    mode = input("Invalid input, enter 1, 2, or 3\n")
 
 if mode is "1":
     print("Reordering system ids.")
 if mode is "2":
-    print("Adjusting system coords.")
+    print("Adjusting system coords to 5x.")
+    scale_factor = 1.667
+if mode is "3":
+    print("Adjusting system coords to 3x.")
+    scale_factor = 0.6
+
 
 system_id = 0
 for i, line in enumerate(lines):
@@ -45,18 +50,18 @@ for i, line in enumerate(lines):
                 system_id = system_id + 1
                 line_elems[j+2] = "\""+str(system_id)+"\""
                 system_str = system_str+" new id: "+line_elems[j+2]
-        if mode is "2":
+        if mode is "2" or mode is "3":
             if line_elems[j] == "x":
                 old_x = line_elems[j+2]
-                line_elems[j+2] = str(round(int(line_elems[j+2])*1.667))
+                line_elems[j+2] = str(round(int(line_elems[j+2])*scale_factor))
                 new_x = line_elems[j+2]
             if line_elems[j] == "y":
                 old_y = line_elems[j+2]
-                line_elems[j+2] = str(round(int(line_elems[j+2])*1.667))
+                line_elems[j+2] = str(round(int(line_elems[j+2])*scale_factor))
                 new_y = line_elems[j+2]
     if mode is "1":
         print_str = print_str+system_str
-    if mode is "2":
+    if mode is "2" or mode is "3":
         print_str = print_str+" old position: "+old_x+", "+old_y+"; new position: "+new_x+", "+new_y
     print(print_str)
 

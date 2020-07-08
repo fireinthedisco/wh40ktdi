@@ -75,7 +75,7 @@ sea_of_chaos_reroll = {
 	#Planet randomization
 	every_system_planet = {
 		limit = {
-			NOT = { is_sea_of_chaos_special = yes }
+			NOT = { is_sea_of_chaos_special_planet = yes }
 			NOT = { is_primary_star = yes }
 		}
 		remove_planet = yes
@@ -157,24 +157,97 @@ sea_of_chaos_reroll = {
 	}
 }
 
+sea_of_chaos_special_game_start_init = {
+	random_system = {
+		limit = {
+			has_star_flag = sea_of_chaos
+			NOT = { has_sea_of_chaos_special = yes }
+		}
+		random_system_planet = {
+			limit = { NOT = { is_primary_star = yes }}
+			$SPECIAL$_init = yes
+			star = {
+				planet_event = {
+					id = warp.3
+					days = 1
+					random = 359
+				}
+			}
+		}
+	}
+}
+
+sea_of_chaos_special_init = {
+	if = {
+		limit = { ROOT = { solar_system = { any_system_$TYPE$ = { has_$TYPE$_flag = $SPECIAL$ }}}}
+		$SPECIAL$_init = yes
+		star = {
+			planet_event = {
+				id = warp.3
+				days = 360
+			}
+		}
+	}
+}
+
 eye_of_khorne_init = {
-	set_planet_name = "Eye of Khorne"
-	set_planet_flag = eye_of_khorne
+	solar_system = {
+		spawn_megastructure = {
+			name = "Eye of Khorne"
+			type = warp_link_khorne
+			location = PREV
+			init_effect = {
+				set_megastructure_flag = eye_of_khorne
+			}
+		}
+	}
+	remove_planet = yes
+	solar_system = { set_name = "Eye of Khorne" }
 }
 
 black_womb_init = {
-	set_planet_name = "Black Womb"
-	set_planet_flag = black_womb
+	solar_system = {
+		spawn_megastructure = {
+			name = "Black Womb"
+			type = warp_link_slaanesh
+			location = PREV
+			init_effect = {
+				set_megastructure_flag = black_womb
+			}
+		}
+	}
+	remove_planet = yes
+	solar_system = { set_name = "Black Womb" }
 }
 
 gardengate_init = {
-	set_planet_name = "The Gardengate"
-	set_planet_flag = gardengate
+	solar_system = {
+		spawn_megastructure = {
+			name = "Gardengate"
+			type = warp_link_nurgle
+			location = PREV
+			init_effect = {
+				set_megastructure_flag = gardengate
+			}
+		}
+	}
+	remove_planet = yes
+	solar_system = { set_name = "Gardengate" }
 }
 
 eternity_stair_init = {
-	set_planet_name = "The Eternity Stair"
-	set_planet_flag = eternity_stair
+	solar_system = {
+		spawn_megastructure = {
+			name = "Eternity Stair"
+			type = warp_link_tzeentch
+			location = PREV
+			init_effect = {
+				set_megastructure_flag = eternity_stair
+			}
+		}
+	}
+	remove_planet = yes
+	solar_system = { set_name = "Eternity Stair" }
 }
 
 well_of_eternity_init = {
@@ -185,6 +258,11 @@ well_of_eternity_init = {
 forge_of_souls_init = {
 	set_planet_name = "The Forge of Souls"
 	set_planet_flag = forge_of_souls
+}
+
+gate_of_khaine_init = {
+	set_planet_name = "The Gate of Khaine"
+	set_planet_flag = gate_of_khaine
 }
 
 warp_exit_init = {

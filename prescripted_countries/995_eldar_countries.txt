@@ -1,0 +1,638 @@
+craftworld_alaitoc = {
+	name = "Alaitoc"
+	adjective = "Alaitoc"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_alaitoc custom_start_screen }
+	
+	planet_name = "Alaitoc Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "alaitoc_init"
+	system_name = "Alaitoc"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_bieltan = {
+	name = "Biel-tan"
+	adjective = "Biel-tan"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_bieltan custom_start_screen }
+	
+	planet_name = "Biel-tan Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "bieltan_init"
+	system_name = "Biel-tan"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_iyanden = {
+	name = "Iyanden"
+	adjective = "Iyanden"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_iyanden custom_start_screen }
+	
+	planet_name = "Iyanden Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "iyanden_init"
+	system_name = "Iyanden"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_ulthwe = {
+	name = "Ulthwé"
+	adjective = "Ulthwé"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_ulthwe custom_start_screen }
+	
+	planet_name = "Ulthwé Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "ulthwe_init"
+	system_name = "Ulthwé"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_altansar = {
+	name = "Altansar"
+	adjective = "Altansar"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_altansar custom_start_screen }
+	
+	planet_name = "Altansar Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "altansar_init"
+	system_name = "Altansar"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_dorhai = {
+	name = "Dorhai"
+	adjective = "Dorhai"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_dorhai custom_start_screen }
+	
+	planet_name = "Dorhai Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "dorhai_init"
+	system_name = "Dorhai"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_kaelor = {
+	name = "Kaelor"
+	adjective = "Kaelor"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_kaelor custom_start_screen }
+	
+	planet_name = "Kaelor Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "kaelor_init"
+	system_name = "Kaelor"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_zaisuthra = {
+	name = "Zaisuthra"
+	adjective = "Zaisuthra"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_zaisuthra custom_start_screen }
+	
+	planet_name = "Zaisuthra Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "zaisuthra_init"
+	system_name = "Zaisuthra"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+craftworld_ulthwenadaan = {
+	name = "Ulthwé-Na-Daan"
+	adjective = "Ulthwé-Na-Daan"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { craftworld_ulthwenadaan custom_start_screen }
+	
+	planet_name = "Ulthwé-Na-Daan Core"
+	planet_class = "pc_craftworld_core"
+	initializer = "ulthwenadaan_init"
+	system_name = "Ulthwé-Na-Daan"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "humanoid_05"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}

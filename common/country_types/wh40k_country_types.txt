@@ -1,0 +1,944 @@
+imperium = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+necron_dynasty = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+ork_warband = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+astartes_chapter = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+tau = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+craftworld_eldar = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+dark_eldar = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+hivefleet = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}
+
+chaos_realm = {
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = no #
+	playable = yes
+	has_pulse_events = yes
+	piracy_risk = yes
+	randomize_ethos = no #does this empire have a randomly generated ethos
+	shuffle_pop_ethos = yes
+	needs_survey = yes
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	relations = yes
+	observable = yes
+	can_use_invalid_technology = no
+	can_receive_envoys = yes
+	share_communications = no #default yes, decides if they share communciations with anyone you have contact with
+
+	faction = {
+		needs_border_access = no #decides if a country needs to have explicit border access from another country to enter its borders.
+	}
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 6
+		colonizer = yes
+		internal_policies = no #should AI update internal policies? such as edicts, changing government types etc.  default yes
+		tech = no #should AI advance its technology? default yes
+		modification = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		follow = yes
+		can_use_market = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = { min = 3 max = 3 }
+			science	= { min = 3 max = 3 }
+			colonizer = { min = 1 max = 1 }
+			colossus = { min = 1 max = 1 }
+			titan = { min = 1 max = 2 }
+			battleship = { fraction = { base = 25 }}
+			cruiser = { fraction = { base = 25 }}
+			destroyer = { fraction = { base = 25 }}
+			corvette = { fraction = { base = 25 }}
+		}
+		army_data = {
+			assault_army = {
+				fraction = {
+					factor = 100
+					modifier = {
+						factor = 0
+						always = no
+					}
+				}
+			}
+
+			#... other army types?
+		}
+
+	}
+	trade_routes_available = { always = no } #
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_trade_routes_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+	resources = {
+		category = country_base
+		produces = {
+			energy = 20
+			minerals = 20
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+			influence = 3
+			unity = 5
+			alloys = 5
+			consumer_goods = 10
+			food = 10
+		}
+	}
+	# planet scope
+	branch_office_resources = {
+		category = planet_branch_offices
+		cost = {
+			energy = 1000
+			influence = 50
+		}
+	}
+}

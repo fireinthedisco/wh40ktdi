@@ -1,0 +1,569 @@
+#imperium
+
+imperium_sanctus = {
+	name = "Imperium Sanctus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { imperium_sanctus custom_start_screen }
+	
+	planet_name = "Terra"
+	planet_class = "pc_terra"
+	initializer = "sol_init"
+	system_name = "Sol"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Roboute Guilliman"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 6
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+imperium_nihilus = {
+	name = "Imperium Nihilus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { imperium_nihilus custom_start_screen }
+	
+	planet_name = "Kar Duniash"
+	planet_class = "pc_continental"
+	initializer = "kar_duniash_init"
+	system_name = "Kar Duniash"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_03"
+		gender = male
+		texture = 0
+		hair = 2
+		clothes = 3
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+tempestus = {
+	name = "Tempestus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { tempestus custom_start_screen }
+	
+	planet_name = "Bakka"
+	planet_class = "pc_continental"
+	initializer = "bakka_init"
+	system_name = "Bakka"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_05"
+		gender = male
+		texture = 0
+		hair = 2
+		clothes = 4
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+pacificus = {
+	name = "Pacificus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { pacificus custom_start_screen }
+	
+	planet_name = "Hydraphur"
+	planet_class = "pc_continental"
+	initializer = "hydraphur_init"
+	system_name = "hydraphur"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_01"
+		gender = male
+		texture = 0
+		hair = 7
+		clothes = 3
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+obscurus = {
+	name = "Obscurus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { obscurus custom_start_screen }
+	
+	planet_name = "Cypra Mundi"
+	planet_class = "pc_continental"
+	initializer = "cypra_mundi_init"
+	system_name = "Cypra Mundi"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_04"
+		gender = male
+		texture = 0
+		hair = 1
+		clothes = 5
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+obscurus_sanctus = {
+	name = "Obscurus Sanctus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { obscurus_sanctus custom_start_screen }
+	
+	planet_name = "Agripinaa"
+	planet_class = "pc_continental"
+	initializer = "agripinaa_init"
+	system_name = "Agripinaa"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_02"
+		gender = male
+		texture = 0
+		hair = 5
+		clothes = 1
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+ultima_sanctus = {
+	name = "Ultima Sanctus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { ultima_sanctus custom_start_screen }
+	
+	planet_name = "Ichar IV"
+	planet_class = "pc_continental"
+	initializer = "ichar_init"
+	system_name = "Ichar"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_01"
+		gender = male
+		texture = 0
+		hair = 7
+		clothes = 5
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}
+
+pacificus_nihilus = {
+	name = "Pacificus Nihilus"
+	adjective = "Imperial"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans2"
+		plural = "PRESCRIPTED_species_plural_humans2"
+		adjective = "PRESCRIPTED_species_adjective_humans2"
+		name_list = "HUMAN2"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+	
+	room = "personality_hegemonic_imperialists_room"	
+	
+	authority = "auth_imperial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_despotic_empire
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	origin = "origin_default"
+
+	flags = { pacificus_nihilus custom_start_screen }
+	
+	planet_name = "Adrastopol"
+	planet_class = "pc_continental"
+	initializer = "majestis_init"
+	system_name = "Majestis"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Dante"
+		portrait = "human_male_02"
+		gender = male
+		texture = 0
+		hair = 3
+		clothes = 1
+		leader_class = ruler
+		ruler_title_male = "Lord Commander"
+		ruler_title_female = "Lord Commander"
+	}
+}

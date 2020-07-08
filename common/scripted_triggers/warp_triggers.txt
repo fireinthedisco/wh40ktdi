@@ -1,11 +1,24 @@
-is_sea_of_chaos_special = {
+has_sea_of_chaos_special = {
 	OR = {
-		has_planet_flag = eye_of_khorne
-		has_planet_flag = black_womb
-		has_planet_flag = gardengate
-		has_planet_flag = eternity_stair
+		any_system_planet = { is_sea_of_chaos_special_planet = yes }
+		any_system_megastructure = { is_sea_of_chaos_special_megastructure = yes }
+	}
+}
+
+is_sea_of_chaos_special_planet = {
+	OR = {
 		has_planet_flag = well_of_eternity
 		has_planet_flag = forge_of_souls
+		has_planet_flag = gate_of_khaine
 		has_planet_flag = warp_exit
+	}
+}
+
+is_sea_of_chaos_special_megastructure = {
+	OR = {
+		has_megastructure_flag = eye_of_khorne
+		has_megastructure_flag = black_womb
+		has_megastructure_flag = gardengate
+		has_megastructure_flag = eternity_stair
 	}
 }

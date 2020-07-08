@@ -1,0 +1,54 @@
+same_pop_modifier = {
+	OR = {
+		AND = { check_variable = { which = pop_steps value = 1 } has_modifier = $CLASS$_population_1 }
+		AND = { check_variable = { which = pop_steps value = 2 } has_modifier = $CLASS$_population_2 }
+		AND = { check_variable = { which = pop_steps value = 3 } has_modifier = $CLASS$_population_3 }
+		AND = { check_variable = { which = pop_steps value = 4 } has_modifier = $CLASS$_population_4 }
+		AND = { check_variable = { which = pop_steps value = 5 } has_modifier = $CLASS$_population_5 }
+		AND = { check_variable = { which = pop_steps value = 6 } has_modifier = $CLASS$_population_6 }
+		AND = { check_variable = { which = pop_steps value = 7 } has_modifier = $CLASS$_population_7 }
+		AND = { check_variable = { which = pop_steps value = 8 } has_modifier = $CLASS$_population_8 }
+		AND = { check_variable = { which = pop_steps value = 9 } has_modifier = $CLASS$_population_9 }
+		AND = { check_variable = { which = pop_steps value = 10 } has_modifier = $CLASS$_population_10 }
+		AND = { check_variable = { which = pop_steps value = 11 } has_modifier = $CLASS$_population_11 }
+		AND = { check_variable = { which = pop_steps value = 12 } has_modifier = $CLASS$_population_12 }
+		AND = { check_variable = { which = pop_steps value = 13 } has_modifier = $CLASS$_population_13 }
+		AND = { check_variable = { which = pop_steps value = 14 } has_modifier = $CLASS$_population_14 }
+		AND = { check_variable = { which = pop_steps value = 15 } has_modifier = $CLASS$_population_15 }
+		AND = { check_variable = { which = pop_steps value = 16 } has_modifier = $CLASS$_population_16 }
+		AND = { check_variable = { which = pop_steps value = 17 } has_modifier = $CLASS$_population_17 }
+		AND = { check_variable = { which = pop_steps value = 18 } has_modifier = $CLASS$_population_18 }
+		AND = { check_variable = { which = pop_steps value = 19 } has_modifier = $CLASS$_population_19 }
+		AND = { check_variable = { which = pop_steps value = 20 } has_modifier = $CLASS$_population_20 }
+		AND = { check_variable = { which = pop_steps value = 21 } has_modifier = $CLASS$_population_21 }
+		AND = { check_variable = { which = pop_steps value = 22 } has_modifier = $CLASS$_population_22 }
+		AND = { check_variable = { which = pop_steps value = 23 } has_modifier = $CLASS$_population_23 }
+		AND = { check_variable = { which = pop_steps value = 24 } has_modifier = $CLASS$_population_24 }
+		AND = { check_variable = { which = pop_steps value = 25 } has_modifier = $CLASS$_population_25 }
+		AND = { check_variable = { which = pop_steps value = 26 } has_modifier = $CLASS$_population_26 }
+		AND = { check_variable = { which = pop_steps value = 27 } has_modifier = $CLASS$_population_27 }
+		AND = { check_variable = { which = pop_steps value = 28 } has_modifier = $CLASS$_population_28 }
+		AND = { check_variable = { which = pop_steps value = 29 } has_modifier = $CLASS$_population_29 }
+		AND = { check_variable = { which = pop_steps value = 30 } has_modifier = $CLASS$_population_30 }
+		AND = { check_variable = { which = pop_steps value = 31 } has_modifier = $CLASS$_population_31 }
+		AND = { check_variable = { which = pop_steps value = 32 } has_modifier = $CLASS$_population_32 }
+		AND = { check_variable = { which = pop_steps value = 33 } has_modifier = $CLASS$_population_33 }
+		AND = { check_variable = { which = pop_steps value = 34 } has_modifier = $CLASS$_population_34 }
+		AND = { check_variable = { which = pop_steps value = 35 } has_modifier = $CLASS$_population_35 }
+		AND = { check_variable = { which = pop_steps value = 36 } has_modifier = $CLASS$_population_36 }
+		AND = { check_variable = { which = pop_steps value = 37 } has_modifier = $CLASS$_population_37 }
+		AND = { check_variable = { which = pop_steps value = 38 } has_modifier = $CLASS$_population_38 }
+		AND = { check_variable = { which = pop_steps value = 39 } has_modifier = $CLASS$_population_39 }
+		AND = { check_variable = { which = pop_steps value = 40 } has_modifier = $CLASS$_population_40 }
+		AND = { check_variable = { which = pop_steps value = 41 } has_modifier = $CLASS$_population_41 }
+		AND = { check_variable = { which = pop_steps value = 42 } has_modifier = $CLASS$_population_42 }
+		AND = { check_variable = { which = pop_steps value = 43 } has_modifier = $CLASS$_population_43 }
+		AND = { check_variable = { which = pop_steps value = 44 } has_modifier = $CLASS$_population_44 }
+		AND = { check_variable = { which = pop_steps value = 45 } has_modifier = $CLASS$_population_45 }
+		AND = { check_variable = { which = pop_steps value = 46 } has_modifier = $CLASS$_population_46 }
+		AND = { check_variable = { which = pop_steps value = 47 } has_modifier = $CLASS$_population_47 }
+		AND = { check_variable = { which = pop_steps value = 48 } has_modifier = $CLASS$_population_48 }
+		AND = { check_variable = { which = pop_steps value = 49 } has_modifier = $CLASS$_population_49 }
+		AND = { check_variable = { which = pop_steps value = 50 } has_modifier = $CLASS$_population_50 }
+	}
+}

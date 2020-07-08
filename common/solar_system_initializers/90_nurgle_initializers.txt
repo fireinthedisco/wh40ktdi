@@ -1,0 +1,110 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+gardengate_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { gardengate_system nurgle }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	init_effect = {
+		spawn_megastructure = {
+			name = "Gardengate"
+			type = warp_link_nurgle
+			random_pos = yes
+			orbit_angle = 360		# range of the randomization
+			init_effect = {
+				set_megastructure_flag = gardengate
+			}
+		}
+	}
+}
+
+mansion_of_the_plague_lord_init = {
+	name = "Mansion of the Plague Lord"
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { mansion_of_the_plague_lord_system nurgle }
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "Mansion of the Plague Lord"
+		class = "pc_plague_world"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		entity = "continental_planet_earth_entity"
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { mansion_of_the_plague_lord }
+		
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+}
+
+nurgle_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { nurgle }
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}

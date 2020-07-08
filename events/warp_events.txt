@@ -1,135 +1,20 @@
 namespace = warp
 
-#warp init
+#warp init, on game start
 event = {
     id = warp.1
     is_triggered_only = yes
     hide_window = yes
 
     immediate = {
-        if = {
-            limit = {
-                NOT = {
-                    any_system = {
-                        has_star_flag = sea_of_chaos
-                        has_star_flag = sea_of_chaos_anchor
-                    }
-                }
-            }
-            random_system = {
-                limit = { has_star_flag = sea_of_chaos }
-                set_star_flag = sea_of_chaos_anchor
-            }
-        }
-
-        random_system = {
-            limit = {
-                has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-            }
-            random_system_planet = {
-                limit = { NOT = { is_primary_star = yes }}
-                eye_of_khorne_init = yes
-                planet_event = {
-                    id = warp.3
-                    days = 1
-                    random = 359
-                }
-            }
-        }
-        random_system = {
-            limit = {
-                has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-            }
-            random_system_planet = {
-                limit = { NOT = { is_primary_star = yes }}
-                black_womb_init = yes
-                planet_event = {
-                    id = warp.3
-                    days = 1
-                    random = 359
-                }
-            }
-        }
-        random_system = {
-            limit = {
-                has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-            }
-            random_system_planet = {
-                limit = { NOT = { is_primary_star = yes }}
-                gardengate_init = yes
-                planet_event = {
-                    id = warp.3
-                    days = 1
-                    random = 359
-                }
-            }
-        }
-        random_system = {
-            limit = {
-                has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-            }
-            random_system_planet = {
-                limit = { NOT = { is_primary_star = yes }}
-                eternity_stair_init = yes
-                planet_event = {
-                    id = warp.3
-                    days = 1
-                    random = 359
-                }
-            }
-        }
-        random_system = {
-            limit = {
-                has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-            }
-            random_system_planet = {
-                limit = { NOT = { is_primary_star = yes }}
-                well_of_eternity_init = yes
-                planet_event = {
-                    id = warp.3
-                    days = 1
-                    random = 359
-                }
-            }
-        }
-        random_system = {
-            limit = {
-                has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-            }
-            random_system_planet = {
-                limit = { NOT = { is_primary_star = yes }}
-                forge_of_souls_init = yes
-                planet_event = {
-                    id = warp.3
-                    days = 1
-                    random = 359
-                }
-            }
-        }
-        while = {
-            count = 2
-            random_system = {
-                limit = {
-                    has_star_flag = sea_of_chaos
-                    NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
-                }
-                random_system_planet = {
-                    limit = { NOT = { is_primary_star = yes }}
-                    warp_exit_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 1
-                        random = 359
-                    }
-                }
-            }
-        }
+        sea_of_chaos_special_game_start_init = { SPECIAL = eye_of_khorne }
+        sea_of_chaos_special_game_start_init = { SPECIAL = black_womb }
+        sea_of_chaos_special_game_start_init = { SPECIAL = gardengate }
+        sea_of_chaos_special_game_start_init = { SPECIAL = eternity_stair }
+        sea_of_chaos_special_game_start_init = { SPECIAL = well_of_eternity }
+        sea_of_chaos_special_game_start_init = { SPECIAL = forge_of_souls }
+        sea_of_chaos_special_game_start_init = { SPECIAL = gate_of_khaine }
+        sea_of_chaos_special_game_start_init = { SPECIAL = warp_exit }
         
         every_system = {
             limit = { has_star_flag = sea_of_chaos }
@@ -183,62 +68,29 @@ planet_event = {
         random_system = {
             limit = {
                 has_star_flag = sea_of_chaos
-                NOT = { any_system_planet = { is_sea_of_chaos_special = yes }}
+                NOT = { has_sea_of_chaos_special = yes }
             }
             random_system_planet = {
                 limit = { NOT = { is_primary_star = yes }}
-                if = {
-                    limit = { ROOT = { has_planet_flag = eye_of_khorne }}
-                    eye_of_khorne_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                } else_if = {
-                    limit = { ROOT = { has_planet_flag = black_womb }}
-                    black_womb_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                } else_if = {
-                    limit = { ROOT = { has_planet_flag = gardengate }}
-                    gardengate_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                } else_if = {
-                    limit = { ROOT = { has_planet_flag = eternity_stair }}
-                    eternity_stair_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                } else_if = {
-                    limit = { ROOT = { has_planet_flag = well_of_eternity }}
-                    well_of_eternity_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                } else_if = {
-                    limit = { ROOT = { has_planet_flag = forge_of_souls }}
-                    forge_of_souls_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                } else_if = {
-                    limit = { ROOT = { has_planet_flag = warp_exit }}
-                    warp_exit_init = yes
-                    planet_event = {
-                        id = warp.3
-                        days = 360
-                    }
-                }
+                sea_of_chaos_special_init = { TYPE = megastructure SPECIAL = eye_of_khorne }
+                sea_of_chaos_special_init = { TYPE = megastructure SPECIAL = black_womb }
+                sea_of_chaos_special_init = { TYPE = megastructure SPECIAL = gardengate }
+                sea_of_chaos_special_init = { TYPE = megastructure SPECIAL = eternity_stair }
+                sea_of_chaos_special_init = { TYPE = planet SPECIAL = well_of_eternity }
+                sea_of_chaos_special_init = { TYPE = planet SPECIAL = forge_of_souls }
+                sea_of_chaos_special_init = { TYPE = planet SPECIAL = gate_of_khaine }
+                sea_of_chaos_special_init = { TYPE = planet SPECIAL = warp_exit }
             }
         }
-        remove_planet = yes
+        solar_system = {
+            random_system_planet = {
+                limit = { is_sea_of_chaos_special_planet = yes }
+                remove_planet = yes
+            }
+            random_system_megastructure = {
+                limit = { is_sea_of_chaos_special_megastructure = yes }
+                remove_megastructure = THIS
+            }
+        }
     }
 }
