@@ -1,4 +1,4 @@
-@pop_growth_period = 1 #years
+@pop_growth_period = 0.0833 #years (1/12 a year = 1 month)
 @r_max = 0.05
 
 #hive worlds 100G-2T, most ~750G, Terra 1P, magnitude 9, terra magnitude 12
@@ -12,6 +12,24 @@
 #research worlds 10M-200M, magnitude 6
 #penal worlds ?, magnitude 6
 
+calculate_e_to_x = {
+    set_variable = { which = temp1 value = $x$ }
+    divide_variable = { which = temp1 value = 3 }
+    change_variable = { which = temp1 value = 2 }
+    set_variable = { which = temp2 value = $x$ }
+    divide_variable = { which = temp2 value = temp1 }
+    multiply_variable = { which = temp2 value = -1 }
+    change_variable = { which = temp2 value = 1 }
+    set_variable = { which = temp3 value = $x$ }
+    divide_variable = { which = temp3 value = temp2 }
+    set_variable = { which = var_e_to_x value = 1 }
+	change_variable = { which = var_e_to_x value = temp3 }
+	
+	set_variable = { which = temp1 value = 0 }
+	set_variable = { which = temp2 value = 0 }
+	set_variable = { which = temp3 value = 0 }
+}
+
 reconcile_magnitude = {
 	if = {
 		limit = { NOT = { check_variable = { which = magnitude value = $COMPARE_MAGNITUDE$ }}}
@@ -19,28 +37,24 @@ reconcile_magnitude = {
 			limit = { check_variable = { which = magnitude value > $COMPARE_MAGNITUDE$ }}
 			set_variable = { which = magnitude_diff value = magnitude }
 			subtract_variable = { which = magnitude_diff value = $COMPARE_MAGNITUDE$ }
-			set_variable = { which = magnitude_diff_absolute value = 1 }
 			while = {
 				count = magnitude_diff
-				multiply_variable = { which = magnitude_diff_absolute value = 10 }
+				divide_variable = { which = $TARGET_VAR$ value = 10 }
 			}
-			divide_variable = { which = $TARGET_VAR$ value = magnitude_diff_absolute }
 		}
 		else_if = {
 			limit = { check_variable = { which = magnitude value < $COMPARE_MAGNITUDE$ }}
 			set_variable = { which = magnitude_diff value = $COMPARE_MAGNITUDE$ }
 			subtract_variable = { which = magnitude_diff value = $COMPARE_MAGNITUDE$ }
-			set_variable = { which = magnitude_diff_absolute value = 1 }
 			while = {
 				count = magnitude_diff
-				multiply_variable = { which = magnitude_diff_absolute value = 10 }
+				multiply_variable = { which = $TARGET_VAR$ value = 10 }
 			}
-			multiply_variable = { which = $TARGET_VAR$ value = magnitude_diff_absolute }
 		}
 	}
 }
 
-count_housing_district = {
+count_all_districts = {
 	SLEX_get_custom_parameter_advanced = {
 		CONDITION_NAME = num_districts
 		FIRST_KW = type
@@ -48,69 +62,87 @@ count_housing_district = {
 		THIRD_KW = value
 		VARIABLE = housing_districts
 	}
+	SLEX_get_custom_parameter_advanced = {
+		CONDITION_NAME = num_districts
+		FIRST_KW = type
+		SECOND_KW = any
+		THIRD_KW = value
+		VARIABLE = non_housing_districts
+	}
+	subtract_variable = { which = non_housing_districts value = housing_districts }
 }
 
 calculate_k = {
-	switch = {
+	switch = { #Count number of housing districts and non-housing districts, carrying capacity of districts depends on planet type
 		trigger = is_planet_class
 		pc_agri_world = {
-			count_housing_district = { TYPE = district_housing_complex }
-			set_variable = { which = var_k value = 300 } #300M per district
+			count_all_districts = { TYPE = district_housing_complex }
+			set_variable = { which = housing_district_k value = 300 } #300M per district
 			set_variable = { which = expected_magnitude value = 6 }
 		}
 		pc_research_world = {
-			count_housing_district = { TYPE = district_hab_dome }
-			set_variable = { which = var_k value = 10 } #10M per district
+			count_all_districts = { TYPE = district_hab_dome }
+			set_variable = { which = housing_district_k value = 10 } #10M per district
 			set_variable = { which = expected_magnitude value = 6 }
 		}
 		pc_paradise_world = {
-			count_housing_district = { TYPE = district_resort_housing }
-			set_variable = { which = var_k value = 300 } #300K per district
+			count_all_districts = { TYPE = district_resort_housing }
+			set_variable = { which = housing_district_k value = 300 } #300K per district
 			set_variable = { which = expected_magnitude value = 3 }
 		}
 		pc_fortress_world = {
-			count_housing_district = { TYPE = district_garrison_complex }
-			set_variable = { which = var_k value = 100 } #100M per district
+			count_all_districts = { TYPE = district_garrison_complex }
+			set_variable = { which = housing_district_k value = 100 } #100M per district
 			set_variable = { which = expected_magnitude value = 6 }
 		}
 		pc_penal_world = {
-			count_housing_district = { TYPE = district_housing_block }
-			set_variable = { which = var_k value = 10 } #10M per district?
+			count_all_districts = { TYPE = district_housing_block }
+			set_variable = { which = housing_district_k value = 10 } #10M per district?
 			set_variable = { which = expected_magnitude value = 6 }
 		}
 		pc_mining_world = {
-			count_housing_district = { TYPE = district_housing_complex }
-			set_variable = { which = var_k value = 500 } #500K per district
+			count_all_districts = { TYPE = district_housing_complex }
+			set_variable = { which = housing_district_k value = 500 } #500K per district
 			set_variable = { which = expected_magnitude value = 3 }
 		}
 		pc_industrial_world = {
-			count_housing_district = { TYPE = district_general_housing }
-			set_variable = { which = var_k value = 1 } #1G per district
+			count_all_districts = { TYPE = district_general_housing }
+			set_variable = { which = housing_district_k value = 1 } #1G per district
 			set_variable = { which = expected_magnitude value = 9 }
 		}
 		pc_civilized_world = {
-			count_housing_district = { TYPE = district_imperial_city }
-			set_variable = { which = var_k value = 500 } #500M per district
+			count_all_districts = { TYPE = district_imperial_city }
+			set_variable = { which = housing_district_k value = 500 } #500M per district
 			set_variable = { which = expected_magnitude value = 6 }
 		}
 		pc_forge_world = {
-			count_housing_district = { TYPE = district_hive_city }
-			set_variable = { which = var_k value = 3 } #3G per district
+			count_all_districts = { TYPE = district_hive_city }
+			set_variable = { which = housing_district_k value = 3 } #3G per district
 			set_variable = { which = expected_magnitude value = 9 }
 		}
 		pc_hive_world = {
-			count_housing_district = { TYPE = district_hive_cluster }
-			set_variable = { which = var_k value = 100 } #100G per district
+			count_all_districts = { TYPE = district_hive_cluster }
+			set_variable = { which = housing_district_k value = 100 } #100G per district
 			set_variable = { which = expected_magnitude value = 9 }
 		}
 		pc_terra = {
-			count_housing_district = { TYPE = district_hive_cluster }
-			set_variable = { which = var_k value = 100 } #100G per district
+			count_all_districts = { TYPE = district_hive_cluster }
+			set_variable = { which = housing_district_k value = 100 } #100G per district
 			set_variable = { which = expected_magnitude value = 12 }
 		}
 	}
-	reconcile_magnitude = { COMPARE_MAGNITUDE = expected_magnitude TARGET_VAR = var_k }
-	multiply_variable = { which = var_k value = housing_districts }
+	reconcile_magnitude = { COMPARE_MAGNITUDE = expected_magnitude TARGET_VAR = housing_district_k }
+	set_variable = { which = non_housing_district_k value = housing_district_k }
+	divide_variable = { which = non_housing_district_k value = 10 } #Non-housing district capacity 1/10 of housing district's
+
+	set_variable = { which = var_k value = non_housing_district_k } #Base capacity, even with no districts, is 1/10 a housing district's
+
+	multiply_variable = { which = housing_district_k value = housing_districts } #Number of districts * capacity of each district
+	multiply_variable = { which = non_housing_district_k value = non_housing_districts }
+
+	change_variable = { which = var_k value = housing_district_k } #Add capacity from districts to total capacity
+	change_variable = { which = var_k value = non_housing_district_k }
+	
 	multiply_variable = { which = var_k value = 1.1 } #to allow for overpopulation
 }
 
@@ -119,43 +151,88 @@ calculate_r = {
 	multiply_variable = { which = var_r value = @pop_growth_period }
 }
 
+#E is for emigration
 calculate_e = {
 	set_variable = { which = var_e value = 0 }
+}
+
+calculate_a = {
+	set_variable = { which = var_a value = var_k }
+	subtract_variable = { which = var_a value = population }
+	divide_variable = { which = var_a value = population }
+}
+
+pop_growth_variance = {
+	random_list = {
+		10 = { multiply_variable = { which = new_population value = 0.999 }}
+		10 = { multiply_variable = { which = new_population value = 0.9991 }}
+		10 = { multiply_variable = { which = new_population value = 0.9992 }}
+		10 = { multiply_variable = { which = new_population value = 0.9993 }}
+		10 = { multiply_variable = { which = new_population value = 0.9994 }}
+		10 = { multiply_variable = { which = new_population value = 0.9995 }}
+		10 = { multiply_variable = { which = new_population value = 0.9996 }}
+		10 = { multiply_variable = { which = new_population value = 0.9997 }}
+		10 = { multiply_variable = { which = new_population value = 0.9998 }}
+		10 = { multiply_variable = { which = new_population value = 0.9999 }}
+		10 = {}
+		10 = { multiply_variable = { which = new_population value = 1.0001 }}
+		10 = { multiply_variable = { which = new_population value = 1.0002 }}
+		10 = { multiply_variable = { which = new_population value = 1.0003 }}
+		10 = { multiply_variable = { which = new_population value = 1.0004 }}
+		10 = { multiply_variable = { which = new_population value = 1.0005 }}
+		10 = { multiply_variable = { which = new_population value = 1.0006 }}
+		10 = { multiply_variable = { which = new_population value = 1.0007 }}
+		10 = { multiply_variable = { which = new_population value = 1.0008 }}
+		10 = { multiply_variable = { which = new_population value = 1.0009 }}
+		10 = { multiply_variable = { which = new_population value = 1.001 }}
+	}
 }
 
 reset_vars = {
 	set_variable = { which = var_k value = 0 }
 	set_variable = { which = var_e value = 0 }
 	set_variable = { which = var_r value = 0 }
-	set_variable = { which = var_n value = 0 }
+	set_variable = { which = var_e_to_x value = 0 }
+	set_variable = { which = denominator value = 0 }
 	set_variable = { which = housing_districts value = 0 }
+	set_variable = { which = non_housing_districts value = 0 }
 	set_variable = { which = magnitude_diff value = 0 }
 	set_variable = { which = magnitude_diff_absolute value = 0 }
 	set_variable = { which = expected_magnitude value = 0 }
+	set_variable = { which = pop_steps value = 0 }
+	set_variable = { which = pop_step_threshold value = 0 }
+	set_variable = { which = pop_step_magnitude value = 0 }
+	set_variable = { which = new_population value = 0 }
 }
 
-#dN/dt = rN(1-(N/K)) + E (+I)
-# where r is the growth rate
-# N is initial population (N0)
+# P(t) = K / (1 + Ae^(-rt))
+# where A = (K - P0)/P0
+# P(t) is P at time t (final population)
+# where r is the relative growth rate coefficient
+# P0 is initial population (var population)
 # K is carrying capacity
-# I is immigration (handled by other planets' emigration), E is emigration
 calculate_pop_growth = {
 	calculate_k = yes
 	calculate_r = yes
-	calculate_e = yes
-	set_variable = { which = var_n value = population }
+	calculate_a = yes
+	calculate_e_to_x = { x = var_r }
 
-	set_variable = { which = pop_change value = var_n }
-	divide_variable = { which = pop_change value = var_k }
-	multiply_variable = { which = pop_change value = -1 }
-	change_variable = { which = pop_change value = 1 }
-	multiply_variable = { which = pop_change value = var_n }
-	multiply_variable = { which = pop_change value = var_r }
-	change_variable = { which = pop_change value = var_e }
+	set_variable = { which = denominator value = 1 }
+	divide_variable = { which = denominator value = var_e_to_x }
+	multiply_variable = { which = denominator value = var_a }
+	change_variable = { which = denominator value = 1 }
 
-	change_variable = { which = population value = pop_change }
+	set_variable = { which = new_population value = var_k }
+	divide_variable = { which = new_population value = denominator }
 
-	#reset_vars = yes
+	#pop_growth_variance = yes
+	change_variable = { which = new_population value = var_e }
+
+	set_variable = { which = pop_change value = new_population }
+	subtract_variable = { which = pop_change value = population }
+
+	set_variable = { which = population value = new_population }
+	change_variable = { which = decade0_pop_change value = pop_change }
 }
 
 remove_pop_modifier = {
@@ -225,7 +302,18 @@ assign_pop_modifier_pc = {
 	set_variable = { which = pop_steps_temp value = 0 }
 
 	if = {
-		limit = { NOT = { same_pop_modifier = { CLASS = $CLASS$ }}}
+		limit = {
+			OR = {
+				AND = {
+					dummy_trigger = { DUMMY = "" }
+					NOT = { same_pop_modifier = { CLASS = $CLASS$ }}
+				}
+				AND = {
+					NOT = { dummy_trigger = { DUMMY = "" }}
+					same_pop_modifier = { CLASS = $CLASS$ }
+				}
+			}
+		}
 		remove_pop_modifier = { CLASS = $CLASS$ }
 		if = { limit = { check_variable = { which = pop_steps value = 1 }} add_modifier = { modifier = $CLASS$_population_1 }}
 		else_if = { limit = { check_variable = { which = pop_steps value = 2 }} add_modifier = { modifier = $CLASS$_population_2 }}

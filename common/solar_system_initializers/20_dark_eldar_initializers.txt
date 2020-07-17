@@ -1,0 +1,521 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+commorragh_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { commorragh_system commorragh }
+
+	planet = {
+		name = "High Commorragh"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { commorragh }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+	}
+}
+
+obsidian_rose_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { obsidian_rose_system commorragh }
+
+	planet = {
+		name = "Obsidian Rose"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { obsidian_rose }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Obsidian Rose"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_kabal
+						}
+						set_country_flag = obsidian_rose
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+last_hatred_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { last_hatred_system commorragh }
+
+	planet = {
+		name = "Last Hatred"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { last_hatred }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Last Hatred"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_kabal
+						}
+						set_country_flag = last_hatred
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+dying_sun_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { dying_sun_system commorragh }
+
+	planet = {
+		name = "Dying Sun"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { dying_sun }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Dying Sun"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_kabal
+						}
+						set_country_flag = dying_sun
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+iron_thorn_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { iron_thorn_system commorragh }
+
+	planet = {
+		name = "Iron Thorn"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { iron_thorn }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Obsidian Rose"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_kabal
+						}
+						set_country_flag = iron_thorn
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+broken_sigil_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { broken_sigil_system commorragh }
+
+	planet = {
+		name = "Broken Sigil"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { broken_sigil }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Broken Sigil"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_kabal
+						}
+						set_country_flag = broken_sigil
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+pandaimon_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { pandaimon_system commorragh }
+
+	planet = {
+		name = "Pandaimon"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { pandaimon }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Pandaimon"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_satellite
+						}
+						set_country_flag = pandaimon
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+tyrnanoch_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { tyrnanoch_system commorragh }
+
+	planet = {
+		name = "Tyrnanoch"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { tyrnanoch }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Tyrnanoch"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_satellite
+						}
+						set_country_flag = tyrnanoch
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+nadstrond_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { nadstrond_system commorragh }
+
+	planet = {
+		name = "Nadstrond"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { nadstrond }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Nadstrond"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_satellite
+						}
+						set_country_flag = nadstrond
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+asphodei_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { asphodei_system commorragh }
+
+	planet = {
+		name = "Asphodei"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { asphodei }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Asphodei"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_satellite
+						}
+						set_country_flag = asphodei
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}
+
+svargalok_init = {
+	class = "rl_standard_stars"
+	
+	usage_odds = 0
+
+	flags = { svargalok_system commorragh }
+
+	planet = {
+		name = "Svargalok"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { svargalok }
+
+		init_effect = {
+			prevent_anomaly = yes
+			random_country = {
+				limit = { has_country_flag = commorragh }
+				create_country = {
+					name = "Svargalok"
+					species = PREV
+					type = dark_eldar
+					name_list = PREV
+					effect = {
+						PREVPREV = {
+							create_colony = {
+								owner = PREV
+							}
+						}
+						set_subject_of = {
+							who = PREVPREV
+							subject_type = commorragh_satellite
+						}
+						set_country_flag = svargalok
+					}
+				}
+			}
+			generate_empire_home_planet = yes
+		}
+	}
+}

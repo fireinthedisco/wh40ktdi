@@ -8,6 +8,13 @@ on_game_start = {
 
 on_monthly_pulse = {
 	events = {
+		wh40k.101
+	}
+}
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
 		wh40k.100
 	}
 }

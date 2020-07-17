@@ -7,9 +7,32 @@ event = {
 
 	immediate = {
 		every_planet = {
-			limit = { NOT = { check_variable = { which = population value = 0 }}}
+			limit = { planet_uses_population = yes }
+			set_variable = { which = decade9_pop_change value = decade8_pop_change }
+			set_variable = { which = decade8_pop_change value = decade7_pop_change }
+			set_variable = { which = decade7_pop_change value = decade6_pop_change }
+			set_variable = { which = decade6_pop_change value = decade5_pop_change }
+			set_variable = { which = decade5_pop_change value = decade4_pop_change }
+			set_variable = { which = decade4_pop_change value = decade3_pop_change }
+			set_variable = { which = decade3_pop_change value = decade2_pop_change }
+			set_variable = { which = decade2_pop_change value = decade1_pop_change }
+			set_variable = { which = decade1_pop_change value = decade0_pop_change }
+			set_variable = { which = decade0_pop_change value = 0 }
+		}
+	}
+}
+
+event = {
+	id = wh40k.101
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_planet = {
+			limit = { planet_uses_population = yes }
 			calculate_pop_growth = yes
 			assign_pop_modifier = yes
+			#reset_vars = yes
 		}
 	}
 }

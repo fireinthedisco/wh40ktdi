@@ -402,6 +402,13 @@ event = {
 			set_country_type = craftworld_eldar
 		}
 
+		#dark eldar
+		random_country = {
+			limit = { has_country_flag = commorragh }
+			set_name = "Commorragh"
+			set_country_type = dark_eldar
+		}
+
 
 		#tyranids
 		random_country = {
@@ -500,6 +507,13 @@ event = {
 					size = starbase_outpost
 					owner = PREV
 				}
+			}
+		}
+
+		every_system = {
+			limit = { exists = space_owner }
+			every_system_planet = {
+				surveyed = { set_surveyed = yes surveyor = space_owner }
 			}
 		}
 	}

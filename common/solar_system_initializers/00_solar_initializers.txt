@@ -131,7 +131,7 @@ sol_init = {
 					count = 10
 					add_district = district_imperial_city
 				}
-				set_name = "Mars"
+				set_name = "Luna"
 			}	
 		}
 	}

@@ -61,7 +61,7 @@ warp_link_khorne = {
 	country_can_use = {
 		always = yes
 	}
-	on_action = "warp_link"
+	on_action = "on_entering_warp_link"
 }
 
 warp_link_slaanesh = {
@@ -90,7 +90,7 @@ warp_link_slaanesh = {
 	country_can_use = {
 		always = yes
 	}
-	on_action = "warp_link"
+	on_action = "on_entering_warp_link"
 }
 
 warp_link_nurgle = {
@@ -119,7 +119,7 @@ warp_link_nurgle = {
 	country_can_use = {
 		always = yes
 	}
-	on_action = "warp_link"
+	on_action = "on_entering_warp_link"
 }
 
 warp_link_tzeentch = {
@@ -148,5 +148,35 @@ warp_link_tzeentch = {
 	country_can_use = {
 		always = yes
 	}
-	on_action = "warp_link"
+	on_action = "on_entering_warp_link"
+}
+
+webway_gate = {
+	name = WEBWAY_GATE
+	is_pathfind = yes
+	uses_action = no
+	requires_exploration = no
+	always_active = yes
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0
+	extends_sensors = no
+	icon_frame = 12
+	remember_instances = yes
+	animation_time = 1
+	galactic_map_tooltip_header = WEBWAY_GATE
+	galactic_map_tooltip_desc = WEBWAY_GATE_DESC
+	connection_type = any_other
+	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+
+	country_can_use = {
+		custom_tooltip = {
+			fail_text = WEBWAY_COUNTRY_CANNOT_USE
+			OR = {
+				is_country_type = craftworld_eldar
+				is_country_type = dark_eldar
+			}
+		}
+	}
 }

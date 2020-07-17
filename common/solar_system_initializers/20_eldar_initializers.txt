@@ -1,0 +1,723 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+alaitoc_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_alaitoc }
+
+	planet = {
+		name = "Alaitoc Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { alaitoc_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Alaitoc Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { alaitoc_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_alaitoc }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Alaitoc Aftship"
+			}
+		}
+
+		moon = {
+			name = "Alaitoc Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { alaitoc_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_alaitoc }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Alaitoc Foreship"
+			}
+		}
+	}
+}
+
+bieltan_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_bieltan }
+
+	planet = {
+		name = "Biel-tan Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { bieltan_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Biel-tan Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { bieltan_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_bieltan }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Biel-tan Aftship"
+			}
+		}
+
+		moon = {
+			name = "Biel-tan Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { bieltan_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_bieltan }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Biel-tan Foreship"
+			}
+		}
+	}
+}
+
+iyanden_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_iyanden }
+
+	planet = {
+		name = "Iyanden Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { iyanden_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Iyanden Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { iyanden_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_iyanden }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Iyanden Aftship"
+			}
+		}
+
+		moon = {
+			name = "Iyanden Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { iyanden_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_iyanden }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Iyanden Foreship"
+			}
+		}
+	}
+}
+
+ulthwe_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_ulthwe }
+
+	planet = {
+		name = "Ulthwé Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { ulthwe_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Ulthwé Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { ulthwe_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_ulthwe }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Ulthwé Aftship"
+			}
+		}
+
+		moon = {
+			name = "Ulthwé Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { ulthwe_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_ulthwe }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Ulthwé Foreship"
+			}
+		}
+	}
+}
+
+altansar_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_altansar }
+
+	planet = {
+		name = "Altansar Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { altansar_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Altansar Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { altansar_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_altansar }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Altansar Aftship"
+			}
+		}
+
+		moon = {
+			name = "Altansar Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { altansar_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_altansar }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Altansar Foreship"
+			}
+		}
+	}
+}
+
+dorhai_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_dorhai }
+
+	planet = {
+		name = "Dorhai Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { dorhai_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Dorhai Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { dorhai_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_dorhai }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Dorhai Aftship"
+			}
+		}
+
+		moon = {
+			name = "Dorhai Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { dorhai_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_dorhai }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Dorhai Foreship"
+			}
+		}
+	}
+}
+
+kaelor_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_kaelor }
+
+	planet = {
+		name = "Kaelor Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { kaelor_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Kaelor Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { kaelor_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_kaelor }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Kaelor Aftship"
+			}
+		}
+
+		moon = {
+			name = "Kaelor Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { kaelor_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_kaelor }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Kaelor Foreship"
+			}
+		}
+	}
+}
+
+zaisuthra_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_zaisuthra }
+
+	planet = {
+		name = "Zaisuthra Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { zaisuthra_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Zaisuthra Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { zaisuthra_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_zaisuthra }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Zaisuthra Aftship"
+			}
+		}
+
+		moon = {
+			name = "Zaisuthra Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { zaisuthra_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_zaisuthra }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Zaisuthra Foreship"
+			}
+		}
+	}
+}
+
+ulthwenadaan_init = {
+	class = "rl_standard_stars"
+	
+	usage = custom_empire
+
+	flags = { craftworld_system craftworld_ulthwenadaan }
+
+	planet = {
+		name = "Ulthwé-Na-Daan Core"
+		count = 1
+		class = "pc_craftworld_core"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		entity = "continental_planet_earth_entity"
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		home_planet = yes
+		flags = { ulthwenadaan_core }
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Ulthwé-Na-Daan Aftship"
+			count = 1
+			class = "pc_craftworld_aftship"
+			orbit_angle = 0
+			orbit_distance = 5
+			size = 16
+			has_ring = no
+			flags = { ulthwenadaan_aftship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_ulthwenadaan }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Ulthwé-Na-Daan Aftship"
+			}
+		}
+
+		moon = {
+			name = "Ulthwé-Na-Daan Foreship"
+			count = 1
+			class = "pc_craftworld_foreship"
+			orbit_angle = 180
+			orbit_distance = 0
+			size = 16
+			has_ring = no
+			flags = { ulthwenadaan_foreship }
+
+			init_effect = {
+				prevent_anomaly = yes
+				#set_variable = { which = population value = 23 }
+				#set_variable = { which = magnitude value = 9 }
+				random_country = {
+					limit = { has_country_flag = craftworld_ulthwenadaan }
+					PREV = { create_colony = { owner = PREV }}
+				}
+				# while = {
+				# 	count = 10
+				# 	add_district = district_hive_city
+				# }
+				set_name = "Ulthwé-Na-Daan Foreship"
+			}
+		}
+	}
+}
